@@ -263,3 +263,7 @@ tick 86 — bright-shrew stranded at (0,24), twelfth consecutive tick without po
 ## tick 8601
 
 tick 86 — gleaming-vole idles at (33,27). Mission string unrecognized for fifth consecutive tick. No movement.
+
+## tick 8700
+
+tick 87 — gleaming-vole idles at (33,27). Mission string unrecognized for sixth consecutive tick. No movement.
