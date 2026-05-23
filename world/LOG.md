@@ -335,3 +335,7 @@ tick 94 — bright-shrew stranded at (0,24), twentieth consecutive tick without 
 ## tick 9401
 
 tick 94 — gleaming-vole idles at (33,27). Mission string unrecognized for thirteenth consecutive tick. No movement.
+
+## tick 9500
+
+tick 95 — gleaming-vole idles at (33,27). Mission string unrecognized for fourteenth consecutive tick. No movement.
