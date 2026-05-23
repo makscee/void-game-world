@@ -187,3 +187,7 @@ tick 75 — bright-shrew stranded at (0,24), battery at zero. Condenser coil abo
 ## tick 7600
 
 tick 76 — bright-shrew stranded at (0,24), battery exhausted. Holds position on the old service road. Ruin to the north unmapped. No movement possible.
+
+## tick 7601
+
+tick 76 — gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
