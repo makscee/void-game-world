@@ -11,3 +11,7 @@ bright-shrew scavenges the collapsed transfer yard at (0,22) and advances north 
 ## tick 4300
 
 bright-shrew reaches (0,24) before battery depletion forces return. A service road remnant mapped; collapsed structure sighted to the north.
+
+## tick 4400
+
+bright-shrew stranded at (0,24) on battery zero. Auto-return triggered. Collapsed structure to the north remains unmapped.
