@@ -299,3 +299,7 @@ tick 90 — bright-shrew stranded at (0,24), sixteenth consecutive tick without 
 ## tick 9100
 
 tick 91 — gleaming-vole idles at (33,27). Mission string unrecognized for tenth consecutive tick. No movement.
+
+## tick 9101
+
+tick 91 — bright-shrew stranded at (0,24), seventeenth consecutive tick without power. Northern ruin remains unmapped.
