@@ -399,3 +399,7 @@ tick 102 — bright-shrew remains stranded at (0,24), twenty-seventh consecutive
 ## tick 10300
 
 tick 103 — bright-shrew stranded at (0,24), twenty-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held in reserve.
+
+## tick 10400
+
+tick 104 — bright-shrew stranded at (0,24), twenty-ninth consecutive tick without power. Northern ruin unmapped.
