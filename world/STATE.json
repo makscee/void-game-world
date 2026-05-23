@@ -3,10 +3,10 @@
   "world_started_at": "2026-05-23T20:57:57Z",
   "last_tick_at": "2026-05-23T22:52:36.277Z",
   "x_offset": 0,
-  "y_offset": 0,
+  "y_offset": -13,
   "bunker_centroid": [
-    16.5,
-    27
+    16.666666666666668,
+    13.666666666666666
   ],
-  "player_count": 2
+  "player_count": 3
 }
