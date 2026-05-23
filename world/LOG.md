@@ -479,3 +479,7 @@ tick 119 — bright-shrew stranded at (0,24), forty-third consecutive tick witho
 ## tick 12000
 
 tick 120 — bright-shrew stranded at (0,24), forty-fourth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 12100
+
+tick 121 — bright-shrew stranded at (0,24), forty-fifth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
