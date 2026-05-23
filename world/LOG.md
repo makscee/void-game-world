@@ -339,3 +339,7 @@ tick 94 — gleaming-vole idles at (33,27). Mission string unrecognized for thir
 ## tick 9500
 
 tick 95 — gleaming-vole idles at (33,27). Mission string unrecognized for fourteenth consecutive tick. No movement.
+
+## tick 9501
+
+tick 95 — bright-shrew stranded at (0,24), twenty-first consecutive tick without power. Northern ruin remains unmapped.
