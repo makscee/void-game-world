@@ -315,3 +315,7 @@ tick 92 — gleaming-vole idles at (33,27). Mission string unrecognized for elev
 ## tick 9201
 
 tick 92 — umber-otter departs eastern ridge lip, battery exhausted at (19,-13). Engine recall active. Ridge scout concluded.
+
+## tick 9202
+
+tick 92 — bright-shrew stranded at (0,24), eighteenth consecutive tick without power. Northern ruin remains unmapped.
