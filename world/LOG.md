@@ -435,3 +435,7 @@ tick 110 — bright-shrew stranded at (0,24), thirty-fifth consecutive tick with
 ## tick 11200
 
 tick 112 — bright-shrew stranded at (0,24), thirty-seventh consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 11300
+
+tick 113 — bright-shrew stranded at (0,24), thirty-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
