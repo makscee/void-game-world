@@ -291,3 +291,7 @@ tick 90 — gleaming-vole idles at (33,27). Mission string unrecognized for nint
 ## tick 9001
 
 tick 90 — umber-otter departs bunker at (17,-13), crosses the eastern flats, reaches the ridge at (20,-13). Three tiles mapped.
+
+## tick 9002
+
+tick 90 — bright-shrew stranded at (0,24), sixteenth consecutive tick without power. Northern ruin remains unmapped.
