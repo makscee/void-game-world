@@ -151,3 +151,7 @@ gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
 ## tick 7001
 
 tick 7001 — bright-shrew stranded at (0,24), eighth tick running. Battery zero; auto-return engaged. Condenser coil still aboard. Ruin to the north unmapped.
+
+## tick 7100
+
+gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
