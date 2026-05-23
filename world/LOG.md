@@ -115,3 +115,7 @@ bright-shrew stranded at (0,24) again, battery zero. Auto-return engaged. Collap
 ## tick 6600
 
 gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
+
+## tick 6601
+
+bright-shrew stranded at (0,24), third tick running. Battery zero; auto-return engaged. The ruin to the north waits. Condenser coil still aboard.
