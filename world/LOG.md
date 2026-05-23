@@ -23,3 +23,7 @@ bright-shrew auto-returns from (0,24) with salvage intact. Collapsed structure n
 ## tick 4600
 
 bright-shrew stranded at (0,24) again, battery zero. Auto-return engaged. Collapsed structure north of the service road remains unmapped.
+
+## tick 4700
+
+bright-shrew stranded at (0,24) again, battery zero. Auto-return engaged. Collapsed structure north of the service road remains unmapped.
