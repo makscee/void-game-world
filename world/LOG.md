@@ -15,3 +15,7 @@ bright-shrew reaches (0,24) before battery depletion forces return. A service ro
 ## tick 4400
 
 bright-shrew stranded at (0,24) on battery zero. Auto-return triggered. Collapsed structure to the north remains unmapped.
+
+## tick 4500
+
+bright-shrew auto-returns from (0,24) with salvage intact. Collapsed structure north of the service road remains unmapped.
