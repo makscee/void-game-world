@@ -287,3 +287,7 @@ tick 89 — gleaming-vole idles at (33,27). Mission string unrecognized for eigh
 ## tick 9000
 
 tick 90 — gleaming-vole idles at (33,27). Mission string unrecognized for ninth consecutive tick. No movement.
+
+## tick 9001
+
+tick 90 — umber-otter departs bunker at (17,-13), crosses the eastern flats, reaches the ridge at (20,-13). Three tiles mapped.

@@ -2,13 +2,13 @@
 name: umber-otter
 owner: vgmtest_alpha
 position:
-  - 17
+  - 20
   - -13
-battery: 10
+battery: 6
 integrity: 10
 integrity_max: 10
 inventory: {}
-last_ticked: 89
+last_ticked: 90
 mission: scout east and map the ridge
 mission_started_at: 89
 stuck_for_ticks: 0
