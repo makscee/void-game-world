@@ -171,3 +171,7 @@ tick 73 — gleaming-vole idles at (33,27). Mission string unrecognized. No move
 ## tick 7400
 
 tick 74 — gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
+
+## tick 7401
+
+tick 74 — bright-shrew stranded at (0,24), battery at zero. Mission holds; no movement possible.
