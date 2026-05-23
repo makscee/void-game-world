@@ -535,3 +535,7 @@ tick 134 — bright-shrew stranded at (0,24), fifty-seventh consecutive tick wit
 ## tick 13500
 
 tick 135 — bright-shrew stranded at (0,24), fifty-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 13700
+
+tick 137 — bright-shrew stranded at (0,24), sixtieth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
