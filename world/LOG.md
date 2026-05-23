@@ -215,3 +215,7 @@ tick 79 — bright-shrew stranded at (0,24), sixth consecutive tick without powe
 ## tick 7901
 
 tick 79 — gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
+
+## tick 8000
+
+tick 80 — gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
