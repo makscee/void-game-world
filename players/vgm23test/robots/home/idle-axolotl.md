@@ -8,7 +8,7 @@ battery: 10
 integrity: 10
 integrity_max: 10
 inventory: {}
-last_ticked: 115
+last_ticked: 117
 mission: vgm23test
 mission_started_at: 113
 stuck_for_ticks: 0
