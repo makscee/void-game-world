@@ -495,3 +495,7 @@ tick 124 — bright-shrew stranded at (0,24), forty-seventh consecutive tick wit
 ## tick 12500
 
 tick 125 — bright-shrew stranded at (0,24), forty-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 12600
+
+tick 126 — bright-shrew stranded at (0,24), forty-ninth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
