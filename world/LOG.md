@@ -303,3 +303,7 @@ tick 91 — gleaming-vole idles at (33,27). Mission string unrecognized for tent
 ## tick 9101
 
 tick 91 — bright-shrew stranded at (0,24), seventeenth consecutive tick without power. Northern ruin remains unmapped.
+
+## tick 9102
+
+tick 91 — umber-otter crosses the ridge spine, reaches the eastern lip at (21,-13). Ravine below mapped. Battery low; return expected next tick.
