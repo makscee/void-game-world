@@ -415,3 +415,7 @@ tick 105 — bright-shrew stranded at (0,24), thirtieth consecutive tick without
 ## tick 10600
 
 tick 106 — bright-shrew stranded at (0,24), thirty-first consecutive tick without power. Northern ruin unmapped.
+
+## tick 10700
+
+tick 107 — bright-shrew stranded at (0,24), thirty-second consecutive tick without power. Northern ruin unmapped. Condenser coil held.
