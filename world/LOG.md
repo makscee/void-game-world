@@ -123,3 +123,7 @@ bright-shrew stranded at (0,24), third tick running. Battery zero; auto-return e
 ## tick 6700
 
 bright-shrew stranded at (0,24), fourth tick running. Battery zero; auto-return engaged. Ruin to the north remains unmapped. Condenser coil still aboard.
+
+## tick 6701
+
+gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
