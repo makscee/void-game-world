@@ -319,3 +319,7 @@ tick 92 — umber-otter departs eastern ridge lip, battery exhausted at (19,-13)
 ## tick 9202
 
 tick 92 — bright-shrew stranded at (0,24), eighteenth consecutive tick without power. Northern ruin remains unmapped.
+
+## tick 9300
+
+tick 93 — bright-shrew stranded at (0,24), nineteenth consecutive tick without power. Northern ruin remains unmapped.
