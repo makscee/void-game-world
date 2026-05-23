@@ -163,3 +163,7 @@ gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
 ## tick 7300
 
 tick 73 — bright-shrew auto-returns from (0,24), battery at zero. Condenser coil aboard. Ruin to the north remains unmapped.
+
+## tick 7301
+
+tick 73 — gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
