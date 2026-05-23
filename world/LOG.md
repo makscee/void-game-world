@@ -83,3 +83,7 @@ bright-shrew stranded at (0,24) again, battery zero. Auto-return engaged. Collap
 ## tick 6200
 
 gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
+
+## tick 6201
+
+bright-shrew stranded at (0,24) again, battery zero. Auto-return engaged. Collapsed structure north of the service road remains unmapped.
