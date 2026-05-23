@@ -4,7 +4,7 @@ owner: vgmtest_alpha
 position:
   - 20
   - -13
-battery: 6
+battery: 5
 integrity: 10
 integrity_max: 10
 inventory: {}
