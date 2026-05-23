@@ -195,3 +195,7 @@ tick 76 — gleaming-vole idles at (33,27). Mission string unrecognized. No move
 ## tick 7700
 
 tick 77 — bright-shrew stranded at (0,24), battery exhausted. Fourth consecutive tick without movement. Ruin to the north unmapped.
+
+## tick 7701
+
+tick 77 — gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
