@@ -395,3 +395,7 @@ tick 102 — gleaming-vole departs bunker (33,27), moves east to (35,26). Scaven
 ## tick 10201
 
 tick 102 — bright-shrew remains stranded at (0,24), twenty-seventh consecutive tick without power. Northern ruin unmapped.
+
+## tick 10300
+
+tick 103 — bright-shrew stranded at (0,24), twenty-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held in reserve.
