@@ -223,3 +223,7 @@ tick 80 — gleaming-vole idles at (33,27). Mission string unrecognized. No move
 ## tick 8001
 
 tick 80 — bright-shrew stranded at (0,24), seventh consecutive tick without power. Holds position on old service road. Northern ruin unmapped.
+
+## tick 8100
+
+tick 81 — gleaming-vole idles at (33,27). Mission string unrecognized. No movement.
