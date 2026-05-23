@@ -511,3 +511,7 @@ tick 128 — bright-shrew stranded at (0,24), fifty-first consecutive tick witho
 ## tick 12900
 
 tick 129 — bright-shrew stranded at (0,24), fifty-second consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 13000
+
+tick 130 — bright-shrew stranded at (0,24), fifty-third consecutive tick without power. Northern ruin unmapped. Condenser coil held.
