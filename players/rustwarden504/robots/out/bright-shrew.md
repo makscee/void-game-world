@@ -4,7 +4,7 @@ owner: rustwarden504
 position:
   - 0
   - 22
-battery: 5
+battery: 4
 integrity: 10
 integrity_max: 10
 inventory: {}
