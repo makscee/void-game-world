@@ -403,3 +403,7 @@ tick 103 — bright-shrew stranded at (0,24), twenty-eighth consecutive tick wit
 ## tick 10400
 
 tick 104 — bright-shrew stranded at (0,24), twenty-ninth consecutive tick without power. Northern ruin unmapped.
+
+## tick 10401
+
+tick 104 — gleaming-vole recovers last supplies from collapsed shelf at (35,26). Shelf fully stripped. Gather-food mission complete. Robot begins return west.
