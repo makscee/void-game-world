@@ -311,3 +311,7 @@ tick 91 — umber-otter crosses the ridge spine, reaches the eastern lip at (21,
 ## tick 9200
 
 tick 92 — gleaming-vole idles at (33,27). Mission string unrecognized for eleventh consecutive tick. No movement.
+
+## tick 9201
+
+tick 92 — umber-otter departs eastern ridge lip, battery exhausted at (19,-13). Engine recall active. Ridge scout concluded.
