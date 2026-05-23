@@ -2,13 +2,14 @@
 name: gleaming-vole
 owner: makscee
 position:
-  - 33
-  - 27
-battery: 10
+  - 35
+  - 26
+battery: 7
 integrity: 10
 integrity_max: 10
-inventory: {}
-last_ticked: 101
+inventory:
+  ration: 1
+last_ticked: 102
 mission: gather food
 mission_started_at: 101
 stuck_for_ticks: 0

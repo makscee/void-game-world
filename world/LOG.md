@@ -387,3 +387,7 @@ tick 101 — bright-shrew stranded at (0,24), twenty-sixth consecutive tick with
 ## tick 10101
 
 tick 101 — gleaming-vole idles at (33,27). Mission string unrecognized for twentieth consecutive tick. No movement.
+
+## tick 10200
+
+tick 102 — gleaming-vole departs bunker (33,27), moves east to (35,26). Scavenges from a collapsed shelf. Gather-food mission underway after long dormancy.
