@@ -9,8 +9,8 @@ integrity: 10
 integrity_max: 10
 inventory: {}
 last_ticked: 141
-mission: null
-mission_started_at: null
+mission: vgm24agent
+mission_started_at: 142
 stuck_for_ticks: 0
 ---
 
