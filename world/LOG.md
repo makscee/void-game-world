@@ -1687,3 +1687,7 @@ tick 423 — bright-shrew stranded at (0,24), three hundred and forty-fifth cons
 ## tick 42400
 
 tick 424 — bright-shrew stranded at (0,24), three hundred and forty-sixth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 42500
+
+tick 425 — bright-shrew stranded at (0,24), three hundred and forty-seventh consecutive tick without power. Northern ruin unmapped. Condenser coil held.
