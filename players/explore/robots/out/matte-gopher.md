@@ -2,13 +2,13 @@
 name: matte-gopher
 owner: explore
 position:
-  - 68
+  - 69
   - 32
-battery: 6
+battery: 5
 integrity: 10
 integrity_max: 10
 inventory: {}
-last_ticked: 518
+last_ticked: 519
 mission: explore
 mission_started_at: 516
 stuck_for_ticks: 0
