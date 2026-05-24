@@ -659,3 +659,7 @@ tick 166 — bright-shrew stranded at (0,24), eighty-eighth consecutive tick wit
 ## tick 16700
 
 tick 167 — bright-shrew stranded at (0,24), eighty-ninth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 16800
+
+tick 168 — bright-shrew stranded at (0,24), ninetieth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
