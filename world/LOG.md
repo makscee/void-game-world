@@ -803,3 +803,7 @@ tick 202 — bright-shrew stranded at (0,24), one hundred and twenty-fourth cons
 ## tick 20300
 
 tick 203 — bright-shrew stranded at (0,24), one hundred and twenty-fifth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 20400
+
+tick 204 — bright-shrew stranded at (0,24), one hundred and twenty-sixth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
