@@ -791,3 +791,7 @@ tick 199 — bright-shrew stranded at (0,24), one hundred and twenty-first conse
 ## tick 20000
 
 tick 200 — bright-shrew stranded at (0,24), one hundred and twenty-second consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 20100
+
+tick 201 — bright-shrew stranded at (0,24), one hundred and twenty-third consecutive tick without power. Northern ruin unmapped. Condenser coil held.
