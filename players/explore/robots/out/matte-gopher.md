@@ -4,7 +4,7 @@ owner: explore
 position:
   - 68
   - 32
-battery: 7
+battery: 6
 integrity: 10
 integrity_max: 10
 inventory: {}
