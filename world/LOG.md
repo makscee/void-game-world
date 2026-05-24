@@ -1051,3 +1051,7 @@ tick 264 — bright-shrew stranded at (0,24), one hundred and eighty-sixth conse
 ## tick 26500
 
 tick 265 — bright-shrew stranded at (0,24), one hundred and eighty-seventh consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 26600
+
+tick 266 — bright-shrew stranded at (0,24), one hundred and eighty-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
