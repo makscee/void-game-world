@@ -1219,3 +1219,7 @@ tick 306 — bright-shrew stranded at (0,24), two hundred and twenty-eighth cons
 ## tick 30700
 
 tick 307 — bright-shrew stranded at (0,24), two hundred and twenty-ninth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 30800
+
+tick 308 — bright-shrew stranded at (0,24), two hundred and thirtieth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
