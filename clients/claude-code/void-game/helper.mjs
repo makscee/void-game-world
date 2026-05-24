@@ -3,34 +3,29 @@
  * void-game play-assistant helper.
  *
  * Standalone Node ESM client for the void-game SSH server
- * (`ssh play@void.game.makscee.ru`, port 22 since VGM-23). Drives ONE turn per
- * invocation:
- *   - `render`           connect, drive onboarding if first time, print the screen.
- *   - `send '<line>'`    connect, read to prompt, emit one line, print the result.
+ * (`ssh play@void.game.makscee.ru`, port 22 since VGM-23). Drives ONE action
+ * per invocation via one-shot exec commands (VGM-27):
  *
- * The server (workspace/void-game) is line-oriented and does NOT echo
- * programmatic input, so the helper never relies on seeing its own command
- * bounce back. It reads the channel until a known needle:
- *   - `>>> instruction`  the session screen is ready.
- *   - `Choose a handle`  an unknown fingerprint → onboarding.
- * Both are raced on the first read so the helper detects which flow it is in.
+ *   render                    exec("overview")  — print the current state screen.
+ *   map                       exec("map")       — print the local map window.
+ *   send '<mission text>'     exec('mission "<text>"') — set a robot's mission
+ *                             (optional: send '<robot> <text>' to target by name).
+ *   onboard [<handle>]        bare shell for first-time registration (interactive).
+ *
+ * Each invocation opens a TCP connection, runs one exec, collects stdout, exits.
+ * No session stays open; the server is stateless per exec.
  *
  * Identity = a PERSISTENT ed25519 keypair under ~/.config/void-game/. The
  * server keys player state by the SHA256 fingerprint of that key, so reusing
  * the key resumes the same player across invocations. World state advances on
  * the server's own tick schedule regardless of whether we are connected.
  *
- * Verbatim protocol strings (the contract, from the engine `main` 2026-05-24):
- *   session prompt   `>>> instruction`              (render.ts / index.ts)
- *   onboarding       `Welcome to void-game. Choose a handle (3–16 chars...)`
- *   handle regex     ^[a-z][a-z0-9_]{2,15}$         (onboarding.ts)
- *   mission queued   `queued — disconnect any time.`            → session ends
- *   blank stay-home  `no instruction — robots stay home...`     → session ends
- *   /quit            `disconnected — no mission set.`           → session ends
+ * First-time players: run `node helper.mjs onboard [<handle>]` once to register
+ * (bare shell drives the interactive onboarding prompt). After that all play
+ * goes through the exec commands.
  *
- * The parsing/protocol logic is exported as pure functions for unit tests; the
- * CLI wrapper at the bottom only runs when invoked directly (no live socket in
- * the unit suite).
+ * The parsing/screen logic is exported as pure functions for unit tests; the
+ * CLI wrapper at the bottom only runs when invoked directly.
  */
 import ssh2 from "ssh2";
 import { createHash } from "node:crypto";
@@ -55,94 +50,14 @@ export const HOST = "void.game.makscee.ru";
 export const PORT = 22;
 export const USERNAME = "play";
 
-/**
- * Per-read idle timeout. The live server renders the first session screen
- * quickly but re-prints slash-command output (e.g. /map) noticeably slower,
- * so allow generous headroom for a read-only command's re-prompt to arrive.
- */
-export const READ_TIMEOUT_MS = 20000;
-
-/** Needles that mark a settled server state. */
-export const NEEDLE_PROMPT = ">>> instruction";
-export const NEEDLE_ONBOARDING = "Choose a handle";
-
-/** Terminators that mean "the session has ended server-side". */
-export const TERMINATORS = [
-  "queued — disconnect any time.",
-  "no instruction — robots stay home. disconnect any time.",
-  "disconnected — no mission set.",
-];
+/** Max ms to wait for exec stdout to complete. */
+export const EXEC_TIMEOUT_MS = 20000;
 
 /** Handle charset rule — must match onboarding.ts HANDLE_RE exactly. */
 export const HANDLE_RE = /^[a-z][a-z0-9_]{2,15}$/;
 
-// ---------------------------------------------------------------------------
-// Pure protocol helpers (unit-tested against a stub channel).
-// ---------------------------------------------------------------------------
-
-/**
- * Classify an accumulated channel buffer.
- * @returns 'onboarding' | 'prompt' | null
- * Whichever needle appears FIRST in the buffer wins (the onboarding banner is
- * printed before the session screen, so on a fresh fingerprint the handle
- * prompt is seen first).
- */
-export function findNeedle(buf) {
-  const iPrompt = buf.indexOf(NEEDLE_PROMPT);
-  const iOnboard = buf.indexOf(NEEDLE_ONBOARDING);
-  if (iOnboard === -1 && iPrompt === -1) return null;
-  if (iOnboard === -1) return "prompt";
-  if (iPrompt === -1) return "onboarding";
-  return iOnboard < iPrompt ? "onboarding" : "prompt";
-}
-
-/** True once the buffer contains any session-ending terminator. */
-export function hasTerminator(buf) {
-  return TERMINATORS.some((t) => buf.includes(t));
-}
-
-/**
- * Classify the line the player is about to send.
- *   - 'mission'   free text (no leading `/`) or blank → submitting ends session.
- *   - 'quit'      `/quit` → ends session.
- *   - 'command'   any other slash command → session stays open (re-prompts).
- */
-export function classifyLine(line) {
-  const t = line.trim();
-  if (t === "") return "mission"; // blank = stay home, also ends the session
-  if (!t.startsWith("/")) return "mission";
-  const verb = t.slice(1).split(/\s+/)[0].toLowerCase();
-  return verb === "quit" ? "quit" : "command";
-}
-
-/**
- * Derive a default handle from a key fingerprint when none is supplied.
- * `player_<first 6 hex>` sanitised to satisfy HANDLE_RE.
- */
-export function deriveHandle(fingerprintHex) {
-  const six = (fingerprintHex || "").replace(/[^a-f0-9]/g, "").slice(0, 6) || "000000";
-  return `player_${six}`;
-}
-
-/**
- * Choose the handle for onboarding from explicit arg → env → derived default.
- * Always returns a value satisfying HANDLE_RE (the derived default does).
- */
-export function resolveHandle({ argHandle, envHandle, fingerprintHex }) {
-  const candidate = (argHandle || envHandle || "").trim().toLowerCase();
-  if (candidate && HANDLE_RE.test(candidate)) return candidate;
-  return deriveHandle(fingerprintHex);
-}
-
-/**
- * SHA256 fingerprint (hex) of an OpenSSH public key string. Used only to derive
- * a stable default handle; the server computes its own fingerprint from the key
- * for identity. We hash the base64 body to get a deterministic per-key hex.
- */
-export function pubkeyFingerprintHex(pubkeyText) {
-  const body = (pubkeyText || "").trim().split(/\s+/)[1] || pubkeyText || "";
-  return createHash("sha256").update(body).digest("hex");
-}
+/** Needle that marks the onboarding prompt in a bare shell. */
+export const NEEDLE_ONBOARDING = "Choose a handle";
 
 // ---------------------------------------------------------------------------
 // Keypair management.
@@ -162,9 +77,6 @@ export function ensureKeypair(dir = defaultKeyDir()) {
   const privPath = join(dir, "id_ed25519");
   const pubPath = join(dir, "id_ed25519.pub");
   if (!existsSync(privPath)) {
-    // ssh2's keygen emits an OpenSSH-format private key the Client can parse
-    // (node:crypto's PKCS8 PEM is rejected by ssh2 with "Unsupported key
-    // format") and a standard `ssh-ed25519 <base64>` public key.
     const { private: privateKey, public: publicKey } =
       ssh2utils.generateKeyPairSync("ed25519");
     writeFileSync(privPath, privateKey, { mode: 0o600 });
@@ -192,22 +104,45 @@ export function parseHandleFromScreen(screen) {
   return m ? m[1] : null;
 }
 
+/**
+ * SHA256 fingerprint (hex) of an OpenSSH public key string. Used only to
+ * derive a stable default handle; the server computes its own fingerprint.
+ */
+export function pubkeyFingerprintHex(pubkeyText) {
+  const body = (pubkeyText || "").trim().split(/\s+/)[1] || pubkeyText || "";
+  return createHash("sha256").update(body).digest("hex");
+}
+
+/**
+ * Derive a default handle from a key fingerprint when none is supplied.
+ */
+export function deriveHandle(fingerprintHex) {
+  const six = (fingerprintHex || "").replace(/[^a-f0-9]/g, "").slice(0, 6) || "000000";
+  return `player_${six}`;
+}
+
+/**
+ * Choose the handle for onboarding from explicit arg → env → derived default.
+ */
+export function resolveHandle({ argHandle, envHandle, fingerprintHex }) {
+  const candidate = (argHandle || envHandle || "").trim().toLowerCase();
+  if (candidate && HANDLE_RE.test(candidate)) return candidate;
+  return deriveHandle(fingerprintHex);
+}
+
 // ---------------------------------------------------------------------------
-// Best-effort digest parser (raw screen stays authoritative; this is a hint).
+// Screen parsing (pure; no live socket).
 // ---------------------------------------------------------------------------
 
 /**
  * Parse the known section headers of a rendered screen into a compact object.
- * Tolerant: any field that is absent comes back null/empty. The RAW screen is
- * the source of truth for the player digest; this just makes Claude's job
- * reliable.
+ * Tolerant: any field that is absent comes back null/empty.
  */
 export function parseScreen(screen) {
   const tickM = /=== void-game — tick (\d+) ===/.exec(screen);
   const bunkerM = /^BUNKER\s+(\S+)\s+\((-?\d+),\s*(-?\d+)\)\s+FOOD\s+(\d+)\s*\/\s*(\d+)\s+STOCKPILE\s+\+(\d+)/m.exec(screen);
   const fasting = /FASTING — no new missions/.test(screen);
 
-  // ROBOTS block: lines between "ROBOTS" and the next blank line.
   const robots = [];
   const lines = screen.split(/\r?\n/);
   const rIdx = lines.findIndex((l) => l === "ROBOTS");
@@ -215,7 +150,6 @@ export function parseScreen(screen) {
     for (let i = rIdx + 1; i < lines.length; i++) {
       const l = lines[i];
       if (l.trim() === "") break;
-      // robot head line: "  <name> <status> BAT b/max  INT i/imax ..."
       const rm = /^\s{2}(\S+)\s+(\S+)\s+BAT\s+(\d+)\/(\d+)\s+INT\s+([\d.]+)\/(\d+)/.exec(l);
       if (rm) {
         robots.push({
@@ -232,11 +166,9 @@ export function parseScreen(screen) {
     }
   }
 
-  // NOTES IN BUNKER (<n>) count.
   const notesM = /NOTES IN BUNKER\s*(?:\((\d+)\))?/.exec(screen);
   const notes = notesM ? (notesM[1] ? Number(notesM[1]) : 0) : 0;
 
-  // LAST 5 EVENTS lines.
   const events = [];
   const eIdx = lines.findIndex((l) => l.startsWith("LAST 5 EVENTS"));
   if (eIdx >= 0) {
@@ -266,17 +198,21 @@ export function parseScreen(screen) {
   };
 }
 
+/**
+ * Build the exec command string for a mission.
+ * Optional robot name must match `^[a-z]+-[a-z]+$` (name shape from engine).
+ * The text is always double-quoted (the server strips the quotes via its tokenizer).
+ */
+export function buildMissionCommand(text, robotName = null) {
+  const quoted = `"${text.replace(/"/g, '\\"')}"`;
+  return robotName ? `mission ${robotName} ${quoted}` : `mission ${quoted}`;
+}
+
 // ---------------------------------------------------------------------------
-// Channel read-until logic (pure over a duplex; unit-tested with PassThrough).
+// readUntil (used only for onboarding shell; not needed for exec path).
 // ---------------------------------------------------------------------------
 
-/**
- * Accumulate `data` from `stream` until `predicate(buf)` is truthy, then
- * resolve the full buffer. Rejects with an idle-timeout error (carrying the
- * captured buffer) if no progress within `timeoutMs`. Resolves on stream
- * end/close if the predicate is satisfied by the final buffer, else rejects.
- */
-export function readUntil(stream, predicate, timeoutMs = READ_TIMEOUT_MS) {
+export function readUntil(stream, predicate, timeoutMs = EXEC_TIMEOUT_MS) {
   return new Promise((resolve, reject) => {
     let buf = "";
     let done = false;
@@ -333,69 +269,63 @@ export function readUntil(stream, predicate, timeoutMs = READ_TIMEOUT_MS) {
   });
 }
 
-/** Read until a settled needle (prompt OR onboarding) appears. */
-export function readUntilSettled(stream, timeoutMs = READ_TIMEOUT_MS) {
-  return readUntil(stream, (b) => findNeedle(b) !== null, timeoutMs);
-}
-
-/**
- * Drive onboarding on `stream`: the buffer already shows the `Choose a handle`
- * banner. Write the resolved handle, then read on until the session prompt
- * appears (the server drops straight into the session screen after a valid
- * handle). Returns the handle that was sent.
- */
-export async function driveOnboarding(stream, handle, timeoutMs = READ_TIMEOUT_MS) {
-  stream.write(handle + "\n");
-  await readUntil(stream, (b) => b.includes(NEEDLE_PROMPT), timeoutMs);
-  return handle;
-}
-
-/**
- * Send one line and read the result per its classification:
- *   - mission/quit/blank → read until a terminator, capture, session ends.
- *   - read-only command  → read until the NEXT prompt re-print; the text after
- *                          the sent line up to that prompt is the command output.
- * Returns { kind, output } where output is the freshly-arrived bytes.
- */
-export async function sendLine(stream, line, timeoutMs = READ_TIMEOUT_MS) {
-  const kind = classifyLine(line);
-  stream.write(line + "\n");
-  if (kind === "mission" || kind === "quit") {
-    const buf = await readUntil(stream, hasTerminator, timeoutMs);
-    return { kind, output: buf };
-  }
-  // read-only command: a fresh prompt re-print follows the command output.
-  // Wait for a prompt occurrence; since the channel already held one prompt
-  // before we sent, require that the buffer gains additional prompt text.
-  const buf = await readUntil(stream, (b) => countOccurrences(b, NEEDLE_PROMPT) >= 1, timeoutMs);
-  return { kind, output: buf };
-}
-
-export function countOccurrences(hay, needle) {
-  if (!needle) return 0;
-  let n = 0;
-  let i = hay.indexOf(needle);
-  while (i !== -1) {
-    n++;
-    i = hay.indexOf(needle, i + needle.length);
-  }
-  return n;
-}
-
 // ---------------------------------------------------------------------------
-// Live connection (CLI only; not exercised by unit tests).
+// Live connection helpers.
 // ---------------------------------------------------------------------------
 
 /**
- * Open a shell channel against the live server with the persistent key.
- *
- * VGM-24: request NO pty (`conn.shell(false, cb)`). The server gates its LIVE
- * cursor-redraw TUI on a pty-req being seen; a no-pty channel is its explicit
- * signal to stay on the PLAIN one-shot turn render, which is the escape-free
- * text this helper parses. `conn.shell(cb)` would request a pty by default and
- * wrongly opt the agent into the human live mode.
+ * Run one exec command against the live server. Returns { stdout, code }.
+ * Rejects on connection error or timeout.
  */
-function connect(privateKey) {
+export function execCommand(privateKey, command, timeoutMs = EXEC_TIMEOUT_MS) {
+  return new Promise((resolve, reject) => {
+    const conn = new Client();
+    let settled = false;
+
+    const done = (val) => {
+      if (settled) return;
+      settled = true;
+      try { conn.end(); } catch {}
+      if (val instanceof Error) reject(val);
+      else resolve(val);
+    };
+
+    conn.on("ready", () => {
+      conn.exec(command, (err, stream) => {
+        if (err) { done(err); return; }
+        let stdout = "";
+        let code = 0;
+        const timer = setTimeout(() => {
+          done(new Error(`exec timed out after ${timeoutMs}ms`));
+        }, timeoutMs);
+        stream.on("data", (chunk) => { stdout += chunk.toString("utf8"); });
+        stream.stderr.on("data", () => {}); // drain stderr
+        stream.on("close", (exitCode) => {
+          clearTimeout(timer);
+          code = exitCode ?? 0;
+          done({ stdout, code });
+        });
+      });
+    });
+
+    conn.on("error", (err) => { done(err); });
+
+    conn.connect({
+      host: HOST,
+      port: PORT,
+      username: USERNAME,
+      privateKey,
+      hostVerifier: () => true,
+      readyTimeout: 15000,
+    });
+  });
+}
+
+/**
+ * Open a bare shell for interactive onboarding (first-time players only).
+ * Returns { conn, stream } — caller is responsible for ending both.
+ */
+function connectShell(privateKey) {
   return new Promise((resolve, reject) => {
     const conn = new Client();
     let settled = false;
@@ -416,72 +346,118 @@ function connect(privateKey) {
       port: PORT,
       username: USERNAME,
       privateKey,
-      // It is a public game server; accept any host key.
       hostVerifier: () => true,
       readyTimeout: 15000,
     });
   });
 }
 
+// ---------------------------------------------------------------------------
+// CLI commands.
+// ---------------------------------------------------------------------------
+
+/** Write text to stdout, resolving after flush (handles both TTY and pipe). */
+function writeStdout(text) {
+  return new Promise((resolve) => {
+    if (!text) { resolve(); return; }
+    // Always wait for drain to ensure the pipe buffer is flushed before the
+    // process exits. process.stdout.write() can return false when the OS pipe
+    // buffer is full; we must wait for drain in that case. Even when it returns
+    // true, registering a drain listener that resolves is safe (it fires once).
+    process.stdout.write(text, () => resolve());
+  });
+}
+
+/** render: exec("overview") and print the state screen. */
+async function cmdRender() {
+  const kp = ensureKeypair();
+  const { stdout, code } = await execCommand(kp.privateKey, "overview");
+  await writeStdout(stdout);
+  // Cache the handle from the screen so the SKILL knows which player this is.
+  const handle = parseHandleFromScreen(stdout);
+  if (handle) writeHandleFile(handle, kp.dir);
+  if (code !== 0) process.exit(code);
+}
+
+/** map: exec("map") and print the map window. */
+async function cmdMap() {
+  const kp = ensureKeypair();
+  const { stdout, code } = await execCommand(kp.privateKey, "map");
+  await writeStdout(stdout);
+  if (code !== 0) process.exit(code);
+}
+
 /**
- * One-turn `render`: connect, drive onboarding if needed, capture + print the
- * screen, disconnect. No mission is submitted.
+ * send '<text>' [<robot>]: exec mission command and print the confirmation.
+ * Optionally target a specific robot by name as the second argument.
  */
-async function cmdRender({ argHandle }) {
+async function cmdSend(text, robotName = null) {
+  if (!text) {
+    process.stderr.write("usage: helper.mjs send '<mission text>' [<robot-name>]\n");
+    process.exit(2);
+  }
+  const kp = ensureKeypair();
+  const cmd = buildMissionCommand(text, robotName || null);
+  const { stdout, code } = await execCommand(kp.privateKey, cmd);
+  await writeStdout(stdout);
+  if (code !== 0) process.exit(code);
+}
+
+/**
+ * onboard [<handle>]: bare shell for first-time players. The server asks for a
+ * handle interactively; after registration the screen is shown once and the
+ * session closes. After this, use render/map/send for all subsequent play.
+ */
+async function cmdOnboard({ argHandle }) {
   const kp = ensureKeypair();
   const fpHex = pubkeyFingerprintHex(kp.publicKey);
-  const { conn, stream } = await connect(kp.privateKey);
+
+  // Check if already registered (exec overview; if it works, no onboarding needed).
   try {
-    const first = await readUntilSettled(stream);
-    let screen = first;
-    if (findNeedle(first) === "onboarding") {
-      const handle = resolveHandle({
-        argHandle,
-        envHandle: process.env.VOID_GAME_HANDLE,
-        fingerprintHex: fpHex,
-      });
-      await driveOnboarding(stream, handle);
-      writeHandleFile(handle, kp.dir);
-      // After onboarding the prompt screen is in the buffer; re-read snapshot.
-      screen = await readUntil(stream, (b) => b.includes(NEEDLE_PROMPT));
+    const { stdout, code } = await execCommand(kp.privateKey, "overview", 8000);
+    if (code === 0) {
+      process.stdout.write(stdout);
+      const handle = parseHandleFromScreen(stdout);
+      if (handle) writeHandleFile(handle, kp.dir);
+      process.stderr.write("\nAlready registered — use `node helper.mjs render` to play.\n");
+      return;
     }
-    const parsedHandle = parseHandleFromScreen(screen);
-    if (parsedHandle) writeHandleFile(parsedHandle, kp.dir);
+  } catch {
+    // Not registered or other error; proceed with onboarding.
+  }
+
+  // Not registered: open a bare shell for onboarding.
+  const { conn, stream } = await connectShell(kp.privateKey);
+  try {
+    const banner = await readUntil(stream, (b) => b.includes(NEEDLE_ONBOARDING), 10000);
+    process.stdout.write(banner);
+
+    const handle = resolveHandle({
+      argHandle,
+      envHandle: process.env.VOID_GAME_HANDLE,
+      fingerprintHex: fpHex,
+    });
+
+    // Ask the user interactively if not given.
+    if (!argHandle && !process.env.VOID_GAME_HANDLE) {
+      process.stdout.write(`\n(auto-selecting handle: ${handle})\n`);
+    }
+
+    stream.write(handle + "\n");
+    // Read the session screen that follows onboarding.
+    const screen = await readUntil(stream, (b) => b.includes("BUNKER"), 10000);
     process.stdout.write(screen);
+    writeHandleFile(handle, kp.dir);
+    process.stderr.write(`\nRegistered as "${handle}". Use \`node helper.mjs render\` to play.\n`);
   } finally {
     try { stream.end(); } catch {}
     try { conn.end(); } catch {}
   }
 }
 
-/**
- * One-turn `send`: connect, read to a settled state (driving onboarding if a
- * brand-new key somehow reaches here), emit `<line>`, capture + print the
- * result, disconnect.
- */
-async function cmdSend(line, { argHandle }) {
-  const kp = ensureKeypair();
-  const fpHex = pubkeyFingerprintHex(kp.publicKey);
-  const { conn, stream } = await connect(kp.privateKey);
-  try {
-    const first = await readUntilSettled(stream);
-    if (findNeedle(first) === "onboarding") {
-      const handle = resolveHandle({
-        argHandle,
-        envHandle: process.env.VOID_GAME_HANDLE,
-        fingerprintHex: fpHex,
-      });
-      await driveOnboarding(stream, handle);
-      writeHandleFile(handle, kp.dir);
-      await readUntil(stream, (b) => b.includes(NEEDLE_PROMPT));
-    }
-    const { output } = await sendLine(stream, line);
-    process.stdout.write(output);
-  } finally {
-    try { stream.end(); } catch {}
-    try { conn.end(); } catch {}
-  }
-}
+// ---------------------------------------------------------------------------
+// Arg parsing + main.
+// ---------------------------------------------------------------------------
 
 function parseArgs(argv) {
   const out = { _: [], argHandle: undefined };
@@ -496,17 +472,18 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   const sub = args._[0];
   if (sub === "render") {
-    await cmdRender({ argHandle: args.argHandle });
+    await cmdRender();
+  } else if (sub === "map") {
+    await cmdMap();
   } else if (sub === "send") {
-    const line = args._[1];
-    if (line === undefined) {
-      process.stderr.write("usage: helper.mjs send '<line>'\n");
-      process.exit(2);
-    }
-    await cmdSend(line, { argHandle: args.argHandle });
+    const text = args._[1];
+    const robot = args._[2] || null; // optional robot name as 3rd arg
+    await cmdSend(text, robot);
+  } else if (sub === "onboard") {
+    await cmdOnboard({ argHandle: args.argHandle || args._[1] });
   } else {
     process.stderr.write(
-      "usage: helper.mjs render | helper.mjs send '<line>' [--handle <h>]\n",
+      "usage: helper.mjs render | map | send '<text>' [<robot>] | onboard [<handle>] [--handle <h>]\n",
     );
     process.exit(2);
   }
