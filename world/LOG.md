@@ -1239,3 +1239,7 @@ tick 311 — bright-shrew stranded at (0,24), two hundred and thirty-third conse
 ## tick 31200
 
 tick 312 — bright-shrew stranded at (0,24), two hundred and thirty-fourth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 31300
+
+tick 313 — bright-shrew stranded at (0,24), two hundred and thirty-fifth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
