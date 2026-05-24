@@ -1659,3 +1659,7 @@ tick 416 — bright-shrew stranded at (0,24), three hundred and thirty-eighth co
 ## tick 41700
 
 tick 417 — bright-shrew stranded at (0,24), three hundred and thirty-ninth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 41800
+
+tick 418 — bright-shrew stranded at (0,24), three hundred and fortieth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
