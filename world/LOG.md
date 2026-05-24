@@ -2087,3 +2087,7 @@ tick 519 — matte-gopher continues east to (69,32). Bolt anchors and cracked co
 ## tick 52000
 
 tick 520 — matte-gopher idles at (69,32), battery critical. Bolt anchors and cracked conduit. bright-shrew: 441st consecutive tick stranded, no power.
+
+## tick 52001
+
+tick 520 — bright-shrew: 442nd consecutive tick stranded at (0,24), no power. Northern ruin unmapped. Condenser coil held.
