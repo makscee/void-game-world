@@ -1851,3 +1851,7 @@ tick 464 — bright-shrew stranded at (0,24), three hundred and eighty-sixth con
 ## tick 46500
 
 tick 465 — bright-shrew stranded at (0,24), three hundred and eighty-seventh consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 46600
+
+tick 466 — bright-shrew stranded at (0,24), three hundred and eighty-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
