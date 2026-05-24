@@ -10,8 +10,8 @@ integrity_max: 10
 inventory:
   ration: 2
 last_ticked: 104
-mission: null
-mission_started_at: null
+mission: explore and find foodexplore and find food
+mission_started_at: 507
 stuck_for_ticks: 0
 ---
 
