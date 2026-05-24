@@ -9,7 +9,7 @@ integrity: 10
 integrity_max: 10
 inventory: {}
 last_ticked: 141
-mission: vgm24agent
+mission: stay near the bunker and scavenge
 mission_started_at: 142
 stuck_for_ticks: 0
 ---
