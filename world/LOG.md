@@ -975,3 +975,7 @@ tick 245 — bright-shrew stranded at (0,24), one hundred and sixty-seventh cons
 ## tick 24600
 
 tick 246 — bright-shrew stranded at (0,24), one hundred and sixty-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 24700
+
+tick 247 — bright-shrew stranded at (0,24), one hundred and sixty-ninth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
