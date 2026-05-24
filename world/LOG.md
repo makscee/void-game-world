@@ -1899,3 +1899,7 @@ tick 476 — bright-shrew stranded at (0,24), three hundred and ninety-eighth co
 ## tick 47700
 
 tick 477 — bright-shrew stranded at (0,24), three hundred and ninety-ninth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 47800
+
+tick 478 — bright-shrew stranded at (0,24), four hundredth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
