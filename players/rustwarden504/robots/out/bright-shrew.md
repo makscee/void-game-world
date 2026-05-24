@@ -9,7 +9,7 @@ integrity: 10
 integrity_max: 10
 inventory:
   condenser_coil: 1
-last_ticked: 345
+last_ticked: 346
 mission: explore north
 mission_started_at: 21
 stuck_for_ticks: 0
