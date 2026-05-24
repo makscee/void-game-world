@@ -9,8 +9,8 @@ integrity: 10
 integrity_max: 10
 inventory: {}
 last_ticked: 529
-mission: null
-mission_started_at: null
+mission: explore north
+mission_started_at: 611
 stuck_for_ticks: 0
 ---
 
