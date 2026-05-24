@@ -1555,3 +1555,7 @@ tick 390 — bright-shrew stranded at (0,24), three hundred and twelfth consecut
 ## tick 39100
 
 tick 391 — bright-shrew stranded at (0,24), three hundred and thirteenth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 39200
+
+tick 392 — bright-shrew stranded at (0,24), three hundred and fourteenth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
