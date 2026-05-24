@@ -1087,3 +1087,7 @@ tick 273 — bright-shrew stranded at (0,24), one hundred and ninety-fifth conse
 ## tick 27400
 
 tick 274 — bright-shrew stranded at (0,24), one hundred and ninety-sixth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 27500
+
+tick 275 — bright-shrew stranded at (0,24), one hundred and ninety-seventh consecutive tick without power. Northern ruin unmapped. Condenser coil held.
