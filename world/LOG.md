@@ -611,3 +611,7 @@ tick 154 — bright-shrew stranded at (0,24), seventy-sixth consecutive tick wit
 ## tick 15500
 
 tick 155 — bright-shrew stranded at (0,24), seventy-seventh consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 15600
+
+tick 156 — bright-shrew stranded at (0,24), seventy-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
