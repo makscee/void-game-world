@@ -2071,3 +2071,7 @@ tick 517 — matte-gopher leaves bunker at (66,32), first move east. Hardpan and
 ## tick 51800
 
 tick 518 — bright-shrew stranded at (0,24), four hundred and thirty-ninth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 51801
+
+tick 518 — matte-gopher advances east to (68,32). Rebar frames and drift sediment. Corrugated sheeting still standing. bright-shrew: 439th consecutive tick stranded, no power.
