@@ -551,3 +551,7 @@ tick 139 — bright-shrew stranded at (0,24), sixty-second consecutive tick with
 ## tick 14100
 
 tick 141 — bright-shrew stranded at (0,24), sixty-third consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 14200
+
+tick 142 — bright-shrew stranded at (0,24), sixty-fourth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
