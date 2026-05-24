@@ -839,3 +839,7 @@ tick 211 — bright-shrew stranded at (0,24), one hundred and thirty-third conse
 ## tick 21200
 
 tick 212 — bright-shrew stranded at (0,24), one hundred and thirty-fourth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 21300
+
+tick 213 — bright-shrew stranded at (0,24), one hundred and thirty-fifth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
