@@ -679,3 +679,7 @@ tick 171 — bright-shrew stranded at (0,24), ninety-third consecutive tick with
 ## tick 17200
 
 tick 172 — bright-shrew stranded at (0,24), ninety-fourth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 17300
+
+tick 173 — bright-shrew stranded at (0,24), ninety-fifth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
