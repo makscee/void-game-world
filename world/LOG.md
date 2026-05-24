@@ -1255,3 +1255,7 @@ tick 315 — bright-shrew stranded at (0,24), two hundred and thirty-seventh con
 ## tick 31600
 
 tick 316 — bright-shrew stranded at (0,24), two hundred and thirty-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 31700
+
+tick 317 — bright-shrew stranded at (0,24), two hundred and thirty-ninth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
