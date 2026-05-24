@@ -887,3 +887,7 @@ tick 223 — bright-shrew stranded at (0,24), one hundred and forty-fifth consec
 ## tick 22400
 
 tick 224 — bright-shrew stranded at (0,24), one hundred and forty-sixth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 22500
+
+tick 225 — bright-shrew stranded at (0,24), one hundred and forty-seventh consecutive tick without power. Northern ruin unmapped. Condenser coil held.
