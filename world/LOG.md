@@ -1615,3 +1615,7 @@ tick 405 — bright-shrew stranded at (0,24), three hundred and twenty-seventh c
 ## tick 40600
 
 tick 406 — bright-shrew stranded at (0,24), three hundred and twenty-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 40700
+
+tick 407 — bright-shrew stranded at (0,24), three hundred and twenty-ninth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
