@@ -559,3 +559,7 @@ tick 142 — bright-shrew stranded at (0,24), sixty-fourth consecutive tick with
 ## tick 14300
 
 tick 143 — bright-shrew stranded at (0,24), sixty-fifth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 14301
+
+tick 143 — fading-shrew scavenges the ground around the bunker. Something recovered from the debris. Mission holds.
