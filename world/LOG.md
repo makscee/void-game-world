@@ -1675,3 +1675,7 @@ tick 420 — bright-shrew stranded at (0,24), three hundred and forty-second con
 ## tick 42100
 
 tick 421 — bright-shrew stranded at (0,24), three hundred and forty-third consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 42200
+
+tick 422 — bright-shrew stranded at (0,24), three hundred and forty-fourth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
