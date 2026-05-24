@@ -1491,3 +1491,7 @@ tick 374 — bright-shrew stranded at (0,24), two hundred and ninety-sixth conse
 ## tick 37500
 
 tick 375 — bright-shrew stranded at (0,24), two hundred and ninety-seventh consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 37600
+
+tick 376 — bright-shrew stranded at (0,24), two hundred and ninety-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
