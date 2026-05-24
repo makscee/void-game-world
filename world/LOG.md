@@ -2011,3 +2011,7 @@ tick 504 — bright-shrew stranded at (0,24), four hundred and twenty-sixth cons
 ## tick 50500
 
 tick 505 — bright-shrew stranded at (0,24), four hundred and twenty-seventh consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 50600
+
+tick 506 — bright-shrew stranded at (0,24), four hundred and twenty-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
