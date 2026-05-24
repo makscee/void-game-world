@@ -2119,3 +2119,7 @@ tick 523 — matte-gopher: battery depleted at (69,32), auto-return engaged. Har
 ## tick 52400
 
 tick 524 — bright-shrew: 448th consecutive tick stranded at (0,24), no power. Northern ruin unmapped. Condenser coil held.
+
+## tick 52401
+
+tick 524 — matte-gopher: dormant at (69,32), battery zero, auto-return standby. Hardpan flats hold no new detail.
