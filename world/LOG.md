@@ -1759,3 +1759,7 @@ tick 441 — bright-shrew stranded at (0,24), three hundred and sixty-third cons
 ## tick 44200
 
 tick 442 — bright-shrew stranded at (0,24), three hundred and sixty-fourth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 44300
+
+tick 443 — bright-shrew stranded at (0,24), three hundred and sixty-fifth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
