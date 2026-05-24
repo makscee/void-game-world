@@ -1,0 +1,13 @@
+{
+  "name": "void-game-skill",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Play-assistant SSH client for void-game (hub-local Claude Code skill)",
+  "scripts": {
+    "test": "node --test 'test/*.test.mjs'"
+  },
+  "dependencies": {
+    "ssh2": "^1.17.0"
+  }
+}

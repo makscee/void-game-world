@@ -9,3 +9,6 @@ players never push here; their moves go in over SSH.
 - `ticks/` — the world clock's work queue (queue → processing → archive).
 
 Clone it to spectate. Fork it + run the engine to host your own world.
+
+To **play**, see [`clients/claude-code/void-game/`](clients/claude-code/void-game/)
+for the Claude Code skill, or just `ssh play@void.game.makscee.ru`.
