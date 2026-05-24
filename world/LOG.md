@@ -2019,3 +2019,7 @@ tick 506 — bright-shrew stranded at (0,24), four hundred and twenty-eighth con
 ## tick 50700
 
 tick 507 — bright-shrew stranded at (0,24), four hundred and twenty-ninth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 50800
+
+tick 508 — gleaming-vole leaves the bunker, moves east, recovers a sealed packet from a half-buried cache. Battery running thin.
