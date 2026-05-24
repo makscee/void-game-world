@@ -1995,3 +1995,7 @@ tick 500 — bright-shrew stranded at (0,24), four hundred and twenty-second con
 ## tick 50100
 
 tick 501 — bright-shrew stranded at (0,24), four hundred and twenty-third consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 50200
+
+tick 502 — bright-shrew stranded at (0,24), four hundred and twenty-fourth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
