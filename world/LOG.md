@@ -2027,3 +2027,7 @@ tick 508 — gleaming-vole leaves the bunker, moves east, recovers a sealed pack
 ## tick 50801
 
 tick 508 — bright-shrew stranded at (0,24), four hundred and thirtieth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 50900
+
+tick 509 — gleaming-vole burns last charge stepping back to the bunker, three rations in hold. Mission closed at the threshold.
