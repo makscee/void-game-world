@@ -1999,3 +1999,7 @@ tick 501 — bright-shrew stranded at (0,24), four hundred and twenty-third cons
 ## tick 50200
 
 tick 502 — bright-shrew stranded at (0,24), four hundred and twenty-fourth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 50300
+
+tick 503 — bright-shrew stranded at (0,24), four hundred and twenty-fifth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
