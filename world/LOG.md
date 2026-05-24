@@ -1411,3 +1411,7 @@ tick 354 — bright-shrew stranded at (0,24), two hundred and seventy-sixth cons
 ## tick 35500
 
 tick 355 — bright-shrew stranded at (0,24), two hundred and seventy-seventh consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 35600
+
+tick 356 — bright-shrew stranded at (0,24), two hundred and seventy-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
