@@ -2063,3 +2063,7 @@ tick 516 — bright-shrew stranded at (0,24), four hundred and thirty-seventh co
 ## tick 51700
 
 tick 517 — bright-shrew stranded at (0,24), four hundred and thirty-eighth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 51701
+
+tick 517 — matte-gopher leaves bunker at (66,32), first move east. Hardpan and buried conduit. bright-shrew: 438th consecutive tick stranded, no power.
