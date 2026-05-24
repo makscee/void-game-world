@@ -8,7 +8,7 @@ battery: 0
 integrity: 10
 integrity_max: 10
 inventory: {}
-last_ticked: 526
+last_ticked: 527
 mission: explore
 mission_started_at: 516
 stuck_for_ticks: 0
