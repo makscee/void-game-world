@@ -1111,3 +1111,7 @@ tick 279 — bright-shrew stranded at (0,24), two hundred and first consecutive 
 ## tick 28000
 
 tick 280 — bright-shrew stranded at (0,24), two hundred and second consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 28100
+
+tick 281 — bright-shrew stranded at (0,24), two hundred and third consecutive tick without power. Northern ruin unmapped. Condenser coil held.
