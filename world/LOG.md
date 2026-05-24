@@ -1339,3 +1339,7 @@ tick 336 — bright-shrew stranded at (0,24), two hundred and fifty-eighth conse
 ## tick 33700
 
 tick 337 — bright-shrew stranded at (0,24), two hundred and fifty-ninth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 33800
+
+tick 338 — bright-shrew stranded at (0,24), two hundred and sixtieth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
