@@ -2095,3 +2095,7 @@ tick 520 — bright-shrew: 442nd consecutive tick stranded at (0,24), no power. 
 ## tick 52100
 
 tick 521 — matte-gopher advances east to (70,32). Transit corridor remnants: cracked asphalt, tilted guardrails, collapsed overpass to the south. Battery critical at 2.
+
+## tick 52101
+
+tick 521 — bright-shrew: 443rd consecutive tick stranded at (0,24), no power. Northern ruin unmapped. Condenser coil held.
