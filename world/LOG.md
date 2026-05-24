@@ -2043,3 +2043,7 @@ tick 511 — bright-shrew stranded at (0,24), four hundred and thirty-second con
 ## tick 51200
 
 tick 512 — bright-shrew stranded at (0,24), four hundred and thirty-third consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 51300
+
+tick 513 — bright-shrew stranded at (0,24), four hundred and thirty-fourth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
