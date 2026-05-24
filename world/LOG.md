@@ -1579,3 +1579,7 @@ tick 396 — bright-shrew stranded at (0,24), three hundred and eighteenth conse
 ## tick 39700
 
 tick 397 — bright-shrew stranded at (0,24), three hundred and nineteenth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
+
+## tick 39800
+
+tick 398 — bright-shrew stranded at (0,24), three hundred and twentieth consecutive tick without power. Northern ruin unmapped. Condenser coil held.
