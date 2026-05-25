@@ -11,8 +11,10 @@ inventory:
   ration: 2
   scrap: 2
 last_ticked: 22
-mission: null
-mission_started_at: null
+mission: Move outward one tile per tick, exploring every new tile you enter.
+  Reveal a path from the bunker. Generate descriptions for each new tile
+  discovered.
+mission_started_at: 26
 stuck_for_ticks: 0
 ---
 
