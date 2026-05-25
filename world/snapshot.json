@@ -1,0 +1,330 @@
+{
+  "schema_version": 2,
+  "meta": {
+    "current_tick": 11,
+    "world_started_at": "2026-05-25T00:00:42Z",
+    "last_tick_at": "2026-05-25T00:09:15.104Z",
+    "bunker_centroid": [
+      0,
+      0
+    ],
+    "player_count": 0,
+    "constants": {
+      "spawn_distance_min": 20,
+      "spawn_distance_max": 40,
+      "battery_max_default": 10
+    }
+  },
+  "map": {
+    "grid": "T\n",
+    "x_offset": 0,
+    "y_offset": 0,
+    "origin": [
+      0,
+      0
+    ],
+    "extent": {
+      "min_x": -64,
+      "min_y": -64,
+      "max_x": 63,
+      "max_y": 63
+    },
+    "tower": {
+      "tiles": [
+        [
+          0,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "locked": true
+    }
+  },
+  "canon": {
+    "schema_version": 1,
+    "rules": [
+      {
+        "id": "tower-locked",
+        "text": "The Tower at (0,0) is sealed. No robot may enter or cross its four central tiles. Nobody knows what is inside."
+      },
+      {
+        "id": "charge-stations",
+        "text": "Field charge stations (glyph C) are scattered between the bunker ring and the Tower. A robot resting on a station tile draws power — battery is refilled to maximum that tick."
+      },
+      {
+        "id": "teleport-home",
+        "text": "A robot that loses all charge (battery 0) or suffers a catastrophic break (integrity cap would reach 0) is teleported to its home bunker alive. Items are kept. Only the expedition's progress is lost."
+      },
+      {
+        "id": "spawn-band",
+        "text": "All bunkers spawn at Chebyshev distance >= 20 from the Tower. A robot on a fresh battery (10 tiles per charge) cannot reach the Tower in one leg — the journey requires recharging at field stations."
+      }
+    ],
+    "objects": [
+      {
+        "type": "charge_station",
+        "position": [
+          10,
+          0
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          -11,
+          0
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          0,
+          10
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          0,
+          -11
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          10,
+          10
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          -11,
+          -11
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          10,
+          -11
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          -11,
+          10
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          18,
+          0
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          -19,
+          0
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          0,
+          18
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          0,
+          -19
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          18,
+          18
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          -19,
+          -19
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          18,
+          -19
+        ]
+      },
+      {
+        "type": "charge_station",
+        "position": [
+          -19,
+          18
+        ]
+      }
+    ]
+  },
+  "events": [],
+  "robots": [],
+  "bunkers": [],
+  "regions": [
+    {
+      "position": [
+        0,
+        18
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        -11,
+        0
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        10,
+        10
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        10,
+        -11
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        0,
+        -19
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        -19,
+        0
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        -19,
+        18
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        0,
+        -11
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        18,
+        0
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        18,
+        -19
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        0,
+        10
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        0,
+        0
+      ],
+      "glyph": "T",
+      "description": "## The Tower\n\nSealed. No one knows what is inside.\n\nA black spire of fused girders and dead cabling, taller than anything left\nstanding. The entrance, if there ever was one, is gone — the ground-level\nplates are fused solid, the upper hatches corroded shut. It does not hum. It\ndoes not light. It simply persists, a fixed point in a landscape that has lost\nevery other.\n\nAll distances are measured from here. The robots wake far out, far enough that\nthe Tower is only a notch on the horizon, and they walk toward it because it is\nthe one thing that does not move. The journey takes more than one charge.\n\nLocked. Unknown contents. No unlock mechanic has been found."
+    },
+    {
+      "position": [
+        -11,
+        10
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        10,
+        0
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        18,
+        18
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        -19,
+        -19
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        -11,
+        -11
+      ],
+      "glyph": "C",
+      "description": "A charge station. A robot resting here draws power."
+    }
+  ]
+}
