@@ -77,3 +77,7 @@ grim-lemming moved east to (34,0). New ground: buckled asphalt seam, overturned 
 ## tick 3200
 
 vivid-newt moved west to (-24,0). New ground: cracked truck staging apron, rusted fuel pump island. No hazards encountered.
+
+## tick 3100
+
+pale-toad advanced south to (0,28). New ground: cracked mud flats, collapsed chain-link, silted reed channel. No hazards encountered.
