@@ -2,15 +2,15 @@
 name: grim-lemming
 owner: demo3
 position:
-  - 32
+  - 33
   - 0
-battery: 8
+battery: 7
 integrity: 10
 integrity_max: 10
 inventory:
   ration_tin: 1
   copper_wire: 1
-last_ticked: 20
+last_ticked: 27
 mission: Move outward one tile at a time, exploring the unknown. Discover what
   lies beyond the bunker — describe each new tile as you step onto it.
 mission_started_at: 26

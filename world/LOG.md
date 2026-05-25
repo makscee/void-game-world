@@ -47,3 +47,7 @@ pale-toad left the home bunker and moved north into unexplored ground at (0,24).
 ## tick 2800
 
 pale-toad exited the bunker at (0,25) and moved south onto open ground.
+
+## tick 2701
+
+grim-lemming stepped east from the bunker at (32,0) onto new ground at (33,0). Cracked asphalt and old ruts. No hazards encountered.
