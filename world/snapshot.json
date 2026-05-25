@@ -1,9 +1,9 @@
 {
   "schema_version": 3,
   "meta": {
-    "current_tick": 33,
+    "current_tick": 35,
     "world_started_at": "2026-05-25T14:36:12Z",
-    "last_tick_at": "2026-05-25T14:48:10.942Z",
+    "last_tick_at": "2026-05-25T14:50:32.022Z",
     "bunker_centroid": [
       3.6666666666666665,
       8.333333333333334
@@ -127,6 +127,26 @@
   },
   "events": [
     {
+      "tick": 3402,
+      "text": "grim-lemming stepped east to (36,0). New ground: frost-heaved service apron, collapsed loading canopy, rusted dock hardware. Battery near critical."
+    },
+    {
+      "tick": 3500,
+      "text": "tick 35 — vivid-newt pushed west to (-26,0). New ground: lane terminus, staved drums, collapsed shed remnant. Battery flatlined on arrival; auto-returned to bunker."
+    },
+    {
+      "tick": 3401,
+      "text": "vivid-newt pushed to (-26,0) on final charge. New ground: terminated service lane, frost-heaved parking apron, leaning sign post. Battery exhausted; auto-returned to bunker."
+    },
+    {
+      "tick": 3400,
+      "text": "pale-toad broke off scout at (0,28) — battery near empty. Falling back to bunker at (0,27)."
+    },
+    {
+      "tick": 3300,
+      "text": "pale-toad moved south to (0,29). Soft waterlogged soil, collapsed wire fence, dead grass mats. No hazards. Battery running low."
+    },
+    {
       "tick": 3102,
       "text": "grim-lemming stepped east to (35,0). New ground: crumbled lot edge, toppled chain-link, shattered glass and grit. No hazards."
     },
@@ -185,26 +205,6 @@
     {
       "tick": 2002,
       "text": "vivid-newt swept the bunker at (-21,0). A small find recovered from behind the charge station housing."
-    },
-    {
-      "tick": 2001,
-      "text": "grim-lemming conducted a thorough sweep of the bunker at (32,0). Nothing new recovered — the space has given up what it had."
-    },
-    {
-      "tick": 2100,
-      "text": "grim-lemming made a full sweep of the bunker at (32,0). Nothing new turned up."
-    },
-    {
-      "tick": 2000,
-      "text": "pale-toad made a thorough sweep of the bunker at (0,25). A small find recovered from beneath a loose floor plate."
-    },
-    {
-      "tick": 600,
-      "text": "vivid-newt swept the bunker at (-21,0) and recovered a cache left behind a loose panel — stowed by someone who never returned."
-    },
-    {
-      "tick": 500,
-      "text": "vivid-newt swept the bunker at (-21,0). A small find recovered from behind the charge station housing."
     }
   ],
   "robots": [
@@ -212,10 +212,10 @@
       "name": "vivid-newt",
       "owner": "demo2",
       "position": [
-        -25,
+        -26,
         0
       ],
-      "battery": 1,
+      "battery": 0,
       "integrity": 10,
       "status": "out",
       "mission": "Move outward one tile per tick, exploring every new tile you enter. Reveal a path from the bunker. Generate descriptions for each new tile discovered."
@@ -224,10 +224,10 @@
       "name": "grim-lemming",
       "owner": "demo3",
       "position": [
-        35,
+        36,
         0
       ],
-      "battery": 2,
+      "battery": 0,
       "integrity": 10,
       "status": "out",
       "mission": "Move outward one tile at a time, exploring the unknown. Discover what lies beyond the bunker — describe each new tile as you step onto it."
@@ -237,9 +237,9 @@
       "owner": "demo1",
       "position": [
         0,
-        28
+        27
       ],
-      "battery": 2,
+      "battery": 0,
       "integrity": 10,
       "status": "out",
       "mission": "Scout outward from home base, moving one tile per tick. Explore the surrounding area tile by tile."
@@ -334,6 +334,24 @@
     },
     {
       "position": [
+        -26,
+        0
+      ],
+      "glyph": ".",
+      "description": "The service lane ends without ceremony at a broad patch of packed earth. Three steel drums lie on their sides, staved and hollow, their contents long gone to rust and evaporation. A collapsed utility shed — corrugated steel crumpled nearly flat — marks where the lane once terminated. Scrub grass pushes through every split. No fence remains; whatever marked the boundary rotted to stumps.",
+      "contents": [
+        {
+          "type": "scrap",
+          "detail": "steel sign post section, galvanized, mounting bracket still attached"
+        },
+        {
+          "type": "scrap",
+          "detail": "corrugated steel panel, bent but largely intact, roughly 1m section"
+        }
+      ]
+    },
+    {
+      "position": [
         34,
         0
       ],
@@ -362,6 +380,15 @@
       ],
       "glyph": ".",
       "description": "Fractured asphalt in broad irregular plates, heaved apart by years of frost and root. A stripped signpost lists northward, its placard long sheared away. Moss fills every gap. The memory of a road — nothing more.",
+      "contents": []
+    },
+    {
+      "position": [
+        0,
+        29
+      ],
+      "glyph": ".",
+      "description": "Soft ground south of the clay flats — soil that holds moisture the upper plates have long shed. A collapsed wire fence bisects the tile east–west, its galvanised posts still upright at uneven intervals, the wire between them pressed flat by years of weight and neglect. Dead grass in matted brown sheets. The surface carries a faint damp sheen even without recent rain. No structures, no elevated ground, nothing to shelter behind or climb. The land here drains badly and remembers it.",
       "contents": []
     },
     {
@@ -435,6 +462,15 @@
           "type": "charge_station"
         }
       ]
+    },
+    {
+      "position": [
+        36,
+        0
+      ],
+      "glyph": ".",
+      "description": "A frost-heaved service apron of oil-stained concrete, cracked into broad irregular plates by decades of freeze-thaw. A loading canopy along the east edge has collapsed inward, its corrugated steel roof bowed flat against the rubble beneath it. Rusted dock hardware — cleats, a snapped bollard, a chain anchored to nothing — protrudes from the slab edges. The air carries old diesel and wet aggregate. No shelter. No movement.",
+      "contents": []
     },
     {
       "position": [
