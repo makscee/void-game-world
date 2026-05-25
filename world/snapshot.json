@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
   "meta": {
-    "current_tick": 609,
+    "current_tick": 610,
     "world_started_at": "2026-05-25T00:00:42Z",
-    "last_tick_at": "2026-05-25T10:40:52.219Z",
+    "last_tick_at": "2026-05-25T10:41:56.659Z",
     "bunker_centroid": [
       32,
       0
@@ -234,6 +234,10 @@
   },
   "events": [
     {
+      "tick": 61000,
+      "text": "dusky-pika pushes west along the old road to (23,0), past the last charted mark. A derelict intersection structure identified. Battery critical; robot holds position."
+    },
+    {
       "tick": 60700,
       "text": "dusky-pika advances three tiles west along the old road ridge to (24,0). Fractured asphalt, a downed signpost. Battery critical."
     },
@@ -247,13 +251,13 @@
       "name": "dusky-pika",
       "owner": "vgm29tester",
       "position": [
-        32,
+        23,
         0
       ],
       "battery": 0,
       "integrity": 10,
-      "status": "home",
-      "mission": null
+      "status": "out",
+      "mission": "Continue exploring west. Move further from the bunker, chart new terrain, and document what you find along the old road."
     }
   ],
   "bunkers": [
@@ -315,6 +319,14 @@
       ],
       "glyph": ".",
       "description": "Fractured asphalt. Road slabs have heaved and tilted, edges jutting skyward. A rusted signpost lies across the roadbed — lettering scoured to bare metal. Dust packed into every crack. Flat open ground to the north and south. The Tower is a distinct spire on the western horizon."
+    },
+    {
+      "position": [
+        23,
+        0
+      ],
+      "glyph": "r",
+      "description": "Old road intersection. Two fractured lanes converge beneath a rusted fuel canopy tilted east. The concrete median is split by dry scrub roots. No fuel remains. The canopy shell is hollow but standing — a landmark visible from several tiles."
     },
     {
       "position": [
