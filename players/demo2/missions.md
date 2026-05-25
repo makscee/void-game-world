@@ -12,3 +12,8 @@ duration: 5 ticks
 mission: explore and search the current tile thoroughly for anything useful
 outcome: Searched the bunker thoroughly. Recovered one scrap fragment wedged behind the charge station housing.
 duration: 19 ticks
+
+## tick 22 — vivid-newt
+mission: explore and search the current tile thoroughly for anything useful
+outcome: Thorough sweep of the bunker. Workbench yielded one scrap bracket. Prior searches took the rest — nothing more to find here.
+duration: 21 ticks

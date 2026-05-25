@@ -35,3 +35,7 @@ grim-lemming conducted a thorough sweep of the bunker at (32,0). Nothing new rec
 ## tick 2002
 
 vivid-newt swept the bunker at (-21,0). A small find recovered from behind the charge station housing.
+
+## tick 2200
+
+vivid-newt swept the bunker at (-21,0) a final time. One last scrap recovered from the workbench underside. The space has given up what it had.
