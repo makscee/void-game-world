@@ -1,9 +1,9 @@
 {
   "schema_version": 3,
   "meta": {
-    "current_tick": 35,
+    "current_tick": 36,
     "world_started_at": "2026-05-25T14:36:12Z",
-    "last_tick_at": "2026-05-25T14:50:32.022Z",
+    "last_tick_at": "2026-05-25T14:51:20.416Z",
     "bunker_centroid": [
       3.6666666666666665,
       8.333333333333334
@@ -212,37 +212,37 @@
       "name": "vivid-newt",
       "owner": "demo2",
       "position": [
-        -26,
+        -21,
         0
       ],
       "battery": 0,
       "integrity": 10,
-      "status": "out",
-      "mission": "Move outward one tile per tick, exploring every new tile you enter. Reveal a path from the bunker. Generate descriptions for each new tile discovered."
+      "status": "home",
+      "mission": null
     },
     {
       "name": "grim-lemming",
       "owner": "demo3",
       "position": [
-        36,
+        32,
         0
       ],
       "battery": 0,
       "integrity": 10,
-      "status": "out",
-      "mission": "Move outward one tile at a time, exploring the unknown. Discover what lies beyond the bunker — describe each new tile as you step onto it."
+      "status": "home",
+      "mission": null
     },
     {
       "name": "pale-toad",
       "owner": "demo1",
       "position": [
         0,
-        27
+        25
       ],
       "battery": 0,
       "integrity": 10,
-      "status": "out",
-      "mission": "Scout outward from home base, moving one tile per tick. Explore the surrounding area tile by tile."
+      "status": "home",
+      "mission": null
     }
   ],
   "bunkers": [
