@@ -2,15 +2,15 @@
 name: vivid-newt
 owner: demo2
 position:
-  - -24
+  - -25
   - 0
-battery: 3
+battery: 2
 integrity: 10
 integrity_max: 10
 inventory:
   ration: 2
   scrap: 2
-last_ticked: 32
+last_ticked: 31
 mission: Move outward one tile per tick, exploring every new tile you enter.
   Reveal a path from the bunker. Generate descriptions for each new tile
   discovered.

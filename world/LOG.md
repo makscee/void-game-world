@@ -81,3 +81,7 @@ vivid-newt moved west to (-24,0). New ground: cracked truck staging apron, ruste
 ## tick 3100
 
 pale-toad advanced south to (0,28). New ground: cracked mud flats, collapsed chain-link, silted reed channel. No hazards encountered.
+
+## tick 3101
+
+tick 3100 — vivid-newt advanced west to (-25,0). New ground: buckled service lane, collapsed fencing, dry drainage gulley. No hazards encountered.
