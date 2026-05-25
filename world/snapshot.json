@@ -1,9 +1,9 @@
 {
   "schema_version": 3,
   "meta": {
-    "current_tick": 19,
+    "current_tick": 22,
     "world_started_at": "2026-05-25T14:36:12Z",
-    "last_tick_at": "2026-05-25T14:39:01.696Z",
+    "last_tick_at": "2026-05-25T14:41:52.920Z",
     "bunker_centroid": [
       3.6666666666666665,
       8.333333333333334
@@ -127,6 +127,26 @@
   },
   "events": [
     {
+      "tick": 2002,
+      "text": "vivid-newt swept the bunker at (-21,0). A small find recovered from behind the charge station housing."
+    },
+    {
+      "tick": 2001,
+      "text": "grim-lemming conducted a thorough sweep of the bunker at (32,0). Nothing new recovered — the space has given up what it had."
+    },
+    {
+      "tick": 2100,
+      "text": "grim-lemming made a full sweep of the bunker at (32,0). Nothing new turned up."
+    },
+    {
+      "tick": 2000,
+      "text": "pale-toad made a thorough sweep of the bunker at (0,25). A small find recovered from beneath a loose floor plate."
+    },
+    {
+      "tick": 600,
+      "text": "vivid-newt swept the bunker at (-21,0) and recovered a cache left behind a loose panel — stowed by someone who never returned."
+    },
+    {
       "tick": 500,
       "text": "vivid-newt swept the bunker at (-21,0). A small find recovered from behind the charge station housing."
     },
@@ -151,7 +171,7 @@
         -21,
         0
       ],
-      "battery": 9,
+      "battery": 8,
       "integrity": 10,
       "status": "home",
       "mission": null
@@ -163,7 +183,7 @@
         32,
         0
       ],
-      "battery": 9,
+      "battery": 8,
       "integrity": 10,
       "status": "home",
       "mission": null
@@ -175,7 +195,7 @@
         0,
         25
       ],
-      "battery": 9,
+      "battery": 8,
       "integrity": 10,
       "status": "home",
       "mission": null
