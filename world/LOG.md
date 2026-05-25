@@ -101,3 +101,7 @@ pale-toad broke off scout at (0,28) — battery near empty. Falling back to bunk
 ## tick 3401
 
 vivid-newt pushed to (-26,0) on final charge. New ground: terminated service lane, frost-heaved parking apron, leaning sign post. Battery exhausted; auto-returned to bunker.
+
+## tick 3500
+
+tick 35 — vivid-newt pushed west to (-26,0). New ground: lane terminus, staved drums, collapsed shed remnant. Battery flatlined on arrival; auto-returned to bunker.
