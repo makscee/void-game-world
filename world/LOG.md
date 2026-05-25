@@ -73,3 +73,7 @@ pale-toad moved south from (0,26) onto new ground at (0,27). Silted dirt, rusted
 ## tick 2901
 
 grim-lemming moved east to (34,0). New ground: buckled asphalt seam, overturned barrier, dead weeds. No hazards encountered.
+
+## tick 3200
+
+vivid-newt moved west to (-24,0). New ground: cracked truck staging apron, rusted fuel pump island. No hazards encountered.
