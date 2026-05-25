@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
   "meta": {
-    "current_tick": 607,
+    "current_tick": 608,
     "world_started_at": "2026-05-25T00:00:42Z",
-    "last_tick_at": "2026-05-25T10:37:57.282Z",
+    "last_tick_at": "2026-05-25T10:39:48.210Z",
     "bunker_centroid": [
       32,
       0
@@ -247,13 +247,13 @@
       "name": "dusky-pika",
       "owner": "vgm29tester",
       "position": [
-        24,
+        32,
         0
       ],
       "battery": 0,
       "integrity": 10,
-      "status": "out",
-      "mission": "Explore the surrounding terrain. Move outward from the bunker to chart new tiles. Pick a direction and travel several tiles, observing anything of interest."
+      "status": "home",
+      "mission": null
     }
   ],
   "bunkers": [
