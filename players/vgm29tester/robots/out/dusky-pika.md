@@ -4,7 +4,7 @@ owner: vgm29tester
 position:
   - 24
   - 0
-battery: 1
+battery: 0
 integrity: 10
 integrity_max: 10
 inventory: {}
