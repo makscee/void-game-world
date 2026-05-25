@@ -19,3 +19,7 @@ vivid-newt swept the bunker at (-21,0). A small find recovered from behind the c
 ## tick 600
 
 vivid-newt swept the bunker at (-21,0) and recovered a cache left behind a loose panel — stowed by someone who never returned.
+
+## tick 2000
+
+pale-toad made a thorough sweep of the bunker at (0,25). A small find recovered from beneath a loose floor plate.

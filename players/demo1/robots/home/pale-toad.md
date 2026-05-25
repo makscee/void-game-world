@@ -4,15 +4,16 @@ owner: demo1
 position:
   - 0
   - 25
-battery: 9
+battery: 8
 integrity: 10
 integrity_max: 10
 inventory:
   ration_tab: 2
   patch_wire: 1
-last_ticked: 2
-mission: explore and search the current tile thoroughly for anything useful
-mission_started_at: 1
+  power_cell_dead: 1
+last_ticked: 20
+mission: null
+mission_started_at: null
 stuck_for_ticks: 0
 ---
 
