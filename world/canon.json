@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "id": "tower-locked",
+      "text": "The Tower at (0,0) is sealed. No robot may enter or cross its four central tiles. Nobody knows what is inside."
+    },
+    {
+      "id": "charge-stations",
+      "text": "Field charge stations (glyph C) are scattered between the bunker ring and the Tower. A robot resting on a station tile draws power — battery is refilled to maximum that tick."
+    },
+    {
+      "id": "teleport-home",
+      "text": "A robot that loses all charge (battery 0) or suffers a catastrophic break (integrity cap would reach 0) is teleported to its home bunker alive. Items are kept. Only the expedition's progress is lost."
+    },
+    {
+      "id": "spawn-band",
+      "text": "All bunkers spawn at Chebyshev distance >= 20 from the Tower. A robot on a fresh battery (10 tiles per charge) cannot reach the Tower in one leg — the journey requires recharging at field stations."
+    }
+  ],
+  "objects": [
+    {
+      "type": "charge_station",
+      "position": [
+        10,
+        0
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        -11,
+        0
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        0,
+        10
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        0,
+        -11
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        10,
+        10
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        -11,
+        -11
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        10,
+        -11
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        -11,
+        10
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        18,
+        0
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        -19,
+        0
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        0,
+        18
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        0,
+        -19
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        18,
+        18
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        -19,
+        -19
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        18,
+        -19
+      ]
+    },
+    {
+      "type": "charge_station",
+      "position": [
+        -19,
+        18
+      ]
+    }
+  ]
+}
