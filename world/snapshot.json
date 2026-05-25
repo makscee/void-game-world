@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
   "meta": {
-    "current_tick": 583,
+    "current_tick": 585,
     "world_started_at": "2026-05-25T00:00:42Z",
-    "last_tick_at": "2026-05-25T10:13:59.804Z",
+    "last_tick_at": "2026-05-25T10:15:27.885Z",
     "bunker_centroid": [
       32,
       0
@@ -52,7 +52,7 @@
     }
   },
   "canon": {
-    "schema_version": 1,
+    "schema_version": 2,
     "rules": [
       {
         "id": "tower-locked",
@@ -184,7 +184,53 @@
           18
         ]
       }
-    ]
+    ],
+    "legend": [
+      {
+        "glyph": " ",
+        "meaning": "Unexplored / fog — no robot has charted this tile"
+      },
+      {
+        "glyph": ".",
+        "meaning": "Open ground — traversable terrain"
+      },
+      {
+        "glyph": "#",
+        "meaning": "Impassable — cannot be entered or crossed"
+      },
+      {
+        "glyph": "T",
+        "meaning": "The Tower — sealed, locked, occupies the 4 central tiles at the origin; nobody knows what is inside"
+      },
+      {
+        "glyph": "B",
+        "meaning": "Bunker — a player home base"
+      },
+      {
+        "glyph": "C",
+        "meaning": "Charge station — a robot resting here refills its battery to maximum"
+      },
+      {
+        "glyph": "D",
+        "meaning": "Diner — a food source structure"
+      },
+      {
+        "glyph": "F",
+        "meaning": "Factory — an industrial structure"
+      },
+      {
+        "glyph": "x",
+        "meaning": "Wreckage — the remains of a destroyed robot or structure"
+      },
+      {
+        "glyph": "?",
+        "meaning": "Generated region — a charted region; read the region description for its specific nature (region letters a-z / A-Z map here)"
+      }
+    ],
+    "scale": {
+      "tile_km": 1,
+      "note": "Each map tile is 1 km across. A single tile may contain many things at once — a bunker, robots, a charge station, wreckage — the map glyph shows only the tile primary feature; click a tile to see everything on it."
+    }
   },
   "events": [],
   "robots": [
