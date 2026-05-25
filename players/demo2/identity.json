@@ -1,0 +1,7 @@
+{
+  "handle": "demo2",
+  "fingerprint": "SHA256:demo2fingerprint",
+  "pubkey": "ssh-ed25519 AAAA_DEMO_2 void-game-demo@localhost",
+  "joined_at": "2026-05-25T14:36:21Z",
+  "joined_tick": 1
+}
