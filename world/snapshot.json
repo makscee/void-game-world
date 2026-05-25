@@ -1,0 +1,266 @@
+{
+  "schema_version": 3,
+  "meta": {
+    "current_tick": 19,
+    "world_started_at": "2026-05-25T14:36:12Z",
+    "last_tick_at": "2026-05-25T14:39:01.696Z",
+    "bunker_centroid": [
+      3.6666666666666665,
+      8.333333333333334
+    ],
+    "player_count": 3,
+    "constants": {
+      "spawn_distance_min": 20,
+      "spawn_distance_max": 40,
+      "battery_max_default": 10
+    }
+  },
+  "map": {
+    "grid": "B                    T                               B\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n                     B\n",
+    "x_offset": -21,
+    "y_offset": 0,
+    "origin": [
+      0,
+      0
+    ],
+    "extent": {
+      "min_x": -64,
+      "min_y": -64,
+      "max_x": 63,
+      "max_y": 63
+    },
+    "tower": {
+      "tiles": [
+        [
+          0,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "locked": true
+    }
+  },
+  "canon": {
+    "schema_version": 3,
+    "rules": [
+      {
+        "id": "tower-locked",
+        "text": "The Tower at (0,0) is sealed. No robot may enter or cross its four central tiles. Nobody knows what is inside."
+      },
+      {
+        "id": "teleport-home",
+        "text": "A robot that loses all charge (battery 0) or suffers a catastrophic break (integrity cap would reach 0) is teleported to its home bunker alive. Items are kept. Only the expedition's progress is lost."
+      },
+      {
+        "id": "spawn-band",
+        "text": "All bunkers spawn at Chebyshev distance >= 20 from the Tower. Charge stations exist but must be discovered — they are not pre-placed on the map."
+      }
+    ],
+    "objects": [],
+    "legend": [
+      {
+        "glyph": " ",
+        "meaning": "Unexplored / fog — no robot has charted this tile"
+      },
+      {
+        "glyph": ".",
+        "meaning": "Open ground — traversable terrain"
+      },
+      {
+        "glyph": "#",
+        "meaning": "Impassable — cannot be entered or crossed"
+      },
+      {
+        "glyph": "T",
+        "meaning": "The Tower — sealed, locked, occupies the 4 central tiles at the origin; nobody knows what is inside"
+      },
+      {
+        "glyph": "B",
+        "meaning": "Bunker — a player's home base"
+      },
+      {
+        "glyph": "C",
+        "meaning": "Charge station — a robot resting here refills its battery to maximum"
+      },
+      {
+        "glyph": "D",
+        "meaning": "Diner — a food source structure"
+      },
+      {
+        "glyph": "F",
+        "meaning": "Factory — an industrial structure"
+      },
+      {
+        "glyph": "x",
+        "meaning": "Wreckage — the remains of a destroyed robot or structure"
+      },
+      {
+        "glyph": "?",
+        "meaning": "Generated region — a charted region; read the region description for its specific nature (region letters a–z / A–Z map here)"
+      }
+    ],
+    "scale": {
+      "tile_km": 1,
+      "note": "Each map tile is 1 km across. A single tile may contain many things at once — a bunker, robots, a charge station, wreckage — the map glyph shows only the tile's primary feature; click a tile to see everything on it."
+    },
+    "roles": {
+      "architect": {
+        "role": "You are the Architect — the patient builder-god who shapes the world tile by tile. When a robot first enters an unseen tile, you describe what is there.",
+        "leaning": "decay: you favor ruins, rust, overgrowth, and dereliction over the pristine and the new."
+      },
+      "fate": {
+        "role": "You are the Fate — the arbiter who resolves what a robot finds and what befalls it when it explores or acts.",
+        "leaning": "hardship: outcomes tilt costly but fair — rarely a free gift, never an unearned doom."
+      }
+    }
+  },
+  "events": [
+    {
+      "tick": 500,
+      "text": "vivid-newt swept the bunker at (-21,0). A small find recovered from behind the charge station housing."
+    },
+    {
+      "tick": 400,
+      "text": "grim-lemming searched its bunker and turned up something left behind by a prior occupant."
+    },
+    {
+      "tick": 300,
+      "text": "grim-lemming completed a full sweep of the home bunker at (32,0). Nothing undocumented found."
+    },
+    {
+      "tick": 200,
+      "text": "pale-toad searched its bunker thoroughly and recovered cached supplies."
+    }
+  ],
+  "robots": [
+    {
+      "name": "vivid-newt",
+      "owner": "demo2",
+      "position": [
+        -21,
+        0
+      ],
+      "battery": 9,
+      "integrity": 10,
+      "status": "home",
+      "mission": null
+    },
+    {
+      "name": "grim-lemming",
+      "owner": "demo3",
+      "position": [
+        32,
+        0
+      ],
+      "battery": 9,
+      "integrity": 10,
+      "status": "home",
+      "mission": null
+    },
+    {
+      "name": "pale-toad",
+      "owner": "demo1",
+      "position": [
+        0,
+        25
+      ],
+      "battery": 9,
+      "integrity": 10,
+      "status": "home",
+      "mission": null
+    }
+  ],
+  "bunkers": [
+    {
+      "owner": "demo2",
+      "position": [
+        -21,
+        0
+      ],
+      "food": 20,
+      "stockpile": 0,
+      "home_station": true
+    },
+    {
+      "owner": "demo3",
+      "position": [
+        32,
+        0
+      ],
+      "food": 20,
+      "stockpile": 0,
+      "home_station": true
+    },
+    {
+      "owner": "demo1",
+      "position": [
+        0,
+        25
+      ],
+      "food": 20,
+      "stockpile": 0,
+      "home_station": true
+    }
+  ],
+  "regions": [
+    {
+      "position": [
+        32,
+        0
+      ],
+      "glyph": "B",
+      "description": "demo3's bunker. A hatch in the dirt; a cot; a workbench.",
+      "contents": [
+        {
+          "type": "charge_station"
+        }
+      ]
+    },
+    {
+      "position": [
+        0,
+        0
+      ],
+      "glyph": "T",
+      "description": "## The Tower\n\nSealed. No one knows what is inside.\n\nA black spire of fused girders and dead cabling, taller than anything left\nstanding. The entrance, if there ever was one, is gone — the ground-level\nplates are fused solid, the upper hatches corroded shut. It does not hum. It\ndoes not light. It simply persists, a fixed point in a landscape that has lost\nevery other.\n\nAll distances are measured from here. The robots wake far out, far enough that\nthe Tower is only a notch on the horizon, and they walk toward it because it is\nthe one thing that does not move. The journey takes more than one charge.\n\nLocked. Unknown contents. No unlock mechanic has been found.",
+      "contents": []
+    },
+    {
+      "position": [
+        -21,
+        0
+      ],
+      "glyph": "B",
+      "description": "demo2's bunker. A hatch in the dirt; a cot; a workbench.",
+      "contents": [
+        {
+          "type": "charge_station"
+        }
+      ]
+    },
+    {
+      "position": [
+        0,
+        25
+      ],
+      "glyph": "B",
+      "description": "demo1's bunker. A hatch in the dirt; a cot; a workbench.",
+      "contents": [
+        {
+          "type": "charge_station"
+        }
+      ]
+    }
+  ]
+}
