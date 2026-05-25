@@ -43,3 +43,7 @@ vivid-newt swept the bunker at (-21,0) a final time. One last scrap recovered fr
 ## tick 2700
 
 pale-toad left the home bunker and moved north into unexplored ground at (0,24). Fractured asphalt; no hazards encountered.
+
+## tick 2800
+
+pale-toad exited the bunker at (0,25) and moved south onto open ground.
