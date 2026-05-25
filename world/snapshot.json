@@ -1,9 +1,9 @@
 {
   "schema_version": 3,
   "meta": {
-    "current_tick": 30,
+    "current_tick": 33,
     "world_started_at": "2026-05-25T14:36:12Z",
-    "last_tick_at": "2026-05-25T14:45:00.910Z",
+    "last_tick_at": "2026-05-25T14:48:10.942Z",
     "bunker_centroid": [
       3.6666666666666665,
       8.333333333333334
@@ -127,6 +127,22 @@
   },
   "events": [
     {
+      "tick": 3102,
+      "text": "grim-lemming stepped east to (35,0). New ground: crumbled lot edge, toppled chain-link, shattered glass and grit. No hazards."
+    },
+    {
+      "tick": 3101,
+      "text": "tick 3100 — vivid-newt advanced west to (-25,0). New ground: buckled service lane, collapsed fencing, dry drainage gulley. No hazards encountered."
+    },
+    {
+      "tick": 3100,
+      "text": "pale-toad advanced south to (0,28). New ground: cracked mud flats, collapsed chain-link, silted reed channel. No hazards encountered."
+    },
+    {
+      "tick": 3200,
+      "text": "vivid-newt moved west to (-24,0). New ground: cracked truck staging apron, rusted fuel pump island. No hazards encountered."
+    },
+    {
       "tick": 2901,
       "text": "grim-lemming moved east to (34,0). New ground: buckled asphalt seam, overturned barrier, dead weeds. No hazards encountered."
     },
@@ -189,18 +205,6 @@
     {
       "tick": 500,
       "text": "vivid-newt swept the bunker at (-21,0). A small find recovered from behind the charge station housing."
-    },
-    {
-      "tick": 400,
-      "text": "grim-lemming searched its bunker and turned up something left behind by a prior occupant."
-    },
-    {
-      "tick": 300,
-      "text": "grim-lemming completed a full sweep of the home bunker at (32,0). Nothing undocumented found."
-    },
-    {
-      "tick": 200,
-      "text": "pale-toad searched its bunker thoroughly and recovered cached supplies."
     }
   ],
   "robots": [
@@ -208,10 +212,10 @@
       "name": "vivid-newt",
       "owner": "demo2",
       "position": [
-        -23,
+        -25,
         0
       ],
-      "battery": 4,
+      "battery": 1,
       "integrity": 10,
       "status": "out",
       "mission": "Move outward one tile per tick, exploring every new tile you enter. Reveal a path from the bunker. Generate descriptions for each new tile discovered."
@@ -220,10 +224,10 @@
       "name": "grim-lemming",
       "owner": "demo3",
       "position": [
-        34,
+        35,
         0
       ],
-      "battery": 4,
+      "battery": 2,
       "integrity": 10,
       "status": "out",
       "mission": "Move outward one tile at a time, exploring the unknown. Discover what lies beyond the bunker — describe each new tile as you step onto it."
@@ -233,9 +237,9 @@
       "owner": "demo1",
       "position": [
         0,
-        27
+        28
       ],
-      "battery": 4,
+      "battery": 2,
       "integrity": 10,
       "status": "out",
       "mission": "Scout outward from home base, moving one tile per tick. Explore the surrounding area tile by tile."
@@ -277,6 +281,20 @@
     {
       "position": [
         0,
+        28
+      ],
+      "glyph": ".",
+      "description": "Cracked mud flats south of the culvert line. Dried clay fractures in wide hexagonal plates — the drained memory of a seasonal pool. A collapsed chain-link panel lies flat, its diamond mesh half-sunken into silt. Dead reed stalks crowd what was once a shallow drainage channel, now choked and indistinct. Open ground, no cover, nothing overhead but grey. Land that served no clear purpose and was abandoned with everything else.",
+      "contents": [
+        {
+          "type": "scrap_metal",
+          "detail": "corroded fence post stub, sheared at ground level, half-buried in cracked clay"
+        }
+      ]
+    },
+    {
+      "position": [
+        0,
         27
       ],
       "glyph": ".",
@@ -304,6 +322,15 @@
           "type": "charge_station"
         }
       ]
+    },
+    {
+      "position": [
+        35,
+        0
+      ],
+      "glyph": ".",
+      "description": "A crumbled lot edge where chain-link fencing has toppled entirely, posts rusted through at the base and lying flat in the grit. Shattered safety glass and wind-scoured debris line a concrete curb that once divided road from a loading area or car park. Flat, exposed; the pavement ends in broken aggregate. No standing structure, no shelter from wind or observation.",
+      "contents": []
     },
     {
       "position": [
@@ -363,6 +390,38 @@
       "glyph": ".",
       "description": "Cracked asphalt plates, frost-heaved into low ridges and gaps. A corroded pipe section protrudes from the earth at an angle — diameter suggests drainage, origin unknown. Tyre ruts pressed into old mud have set stone-hard. No standing structure. No shelter.",
       "contents": []
+    },
+    {
+      "position": [
+        -24,
+        0
+      ],
+      "glyph": ".",
+      "description": "A broad concrete apron, cracked and heaved by frost and root. This was a truck staging ground — bay lines survive as faded paint ghosts, curbs split and scattered wide. A fuel pump island holds the centre: two heavy iron columns, nozzle ports packed with mineral scale, hoses long stripped away. Weeds occupy every joint and fault. The ground is level but shattered, carrying a faint mineral taint of old oil.",
+      "contents": [
+        {
+          "type": "scrap",
+          "detail": "iron pump casing fragment, heavy gauge"
+        },
+        {
+          "type": "material",
+          "detail": "lengths of rubber fuel hose, brittle but uncut"
+        }
+      ]
+    },
+    {
+      "position": [
+        -25,
+        0
+      ],
+      "glyph": ".",
+      "description": "A narrow service lane between two collapsed chain-link fence lines. Asphalt buckled into rigid ridges, never repaired. A dry drainage gulley runs along the south edge, compacted with grit and plastic debris. Old utility cable snarled in the fence mesh, insulation cracked to powder. No structure standing — only the lane, the fences, and the silence of a road that served somewhere that no longer exists.",
+      "contents": [
+        {
+          "type": "scrap",
+          "detail": "coil of utility cable, copper core intact beneath cracked insulation"
+        }
+      ]
     },
     {
       "position": [
