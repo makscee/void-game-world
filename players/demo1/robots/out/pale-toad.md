@@ -4,7 +4,7 @@ owner: demo1
 position:
   - 0
   - 28
-battery: 3
+battery: 2
 integrity: 10
 integrity_max: 10
 inventory:
