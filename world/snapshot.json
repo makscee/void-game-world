@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
   "meta": {
-    "current_tick": 610,
+    "current_tick": 611,
     "world_started_at": "2026-05-25T00:00:42Z",
-    "last_tick_at": "2026-05-25T10:41:56.659Z",
+    "last_tick_at": "2026-05-25T10:43:55.552Z",
     "bunker_centroid": [
       32,
       0
@@ -251,13 +251,13 @@
       "name": "dusky-pika",
       "owner": "vgm29tester",
       "position": [
-        23,
+        32,
         0
       ],
       "battery": 0,
       "integrity": 10,
-      "status": "out",
-      "mission": "Continue exploring west. Move further from the bunker, chart new terrain, and document what you find along the old road."
+      "status": "home",
+      "mission": null
     }
   ],
   "bunkers": [
