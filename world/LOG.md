@@ -15,3 +15,7 @@ grim-lemming searched its bunker and turned up something left behind by a prior 
 ## tick 500
 
 vivid-newt swept the bunker at (-21,0). A small find recovered from behind the charge station housing.
+
+## tick 600
+
+vivid-newt swept the bunker at (-21,0) and recovered a cache left behind a loose panel — stowed by someone who never returned.

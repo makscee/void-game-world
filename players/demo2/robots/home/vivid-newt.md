@@ -8,8 +8,9 @@ battery: 9
 integrity: 10
 integrity_max: 10
 inventory:
-  wire: 1
-last_ticked: 5
+  ration: 2
+  scrap: 1
+last_ticked: 6
 mission: null
 mission_started_at: null
 stuck_for_ticks: 0
