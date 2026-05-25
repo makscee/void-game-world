@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
   "meta": {
-    "current_tick": 18,
+    "current_tick": 19,
     "world_started_at": "2026-05-25T00:00:42Z",
-    "last_tick_at": "2026-05-25T00:13:07.506Z",
+    "last_tick_at": "2026-05-25T00:14:11.567Z",
     "bunker_centroid": [
-      0,
+      32,
       0
     ],
-    "player_count": 0,
+    "player_count": 1,
     "constants": {
       "spawn_distance_min": 20,
       "spawn_distance_max": 40,
@@ -16,7 +16,7 @@
     }
   },
   "map": {
-    "grid": "T\n",
+    "grid": "T                               B\n",
     "x_offset": 0,
     "y_offset": 0,
     "origin": [
@@ -187,8 +187,31 @@
     ]
   },
   "events": [],
-  "robots": [],
-  "bunkers": [],
+  "robots": [
+    {
+      "name": "dusky-pika",
+      "owner": "vgm29tester",
+      "position": [
+        32,
+        0
+      ],
+      "battery": 10,
+      "integrity": 10,
+      "status": "home",
+      "mission": null
+    }
+  ],
+  "bunkers": [
+    {
+      "owner": "vgm29tester",
+      "position": [
+        32,
+        0
+      ],
+      "food": 20,
+      "stockpile": 0
+    }
+  ],
   "regions": [
     {
       "position": [
@@ -205,6 +228,14 @@
       ],
       "glyph": "C",
       "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        32,
+        0
+      ],
+      "glyph": "B",
+      "description": "vgm29tester's bunker. A hatch in the dirt; a cot; a workbench."
     },
     {
       "position": [
