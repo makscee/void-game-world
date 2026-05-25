@@ -89,3 +89,7 @@ tick 3100 — vivid-newt advanced west to (-25,0). New ground: buckled service l
 ## tick 3102
 
 grim-lemming stepped east to (35,0). New ground: crumbled lot edge, toppled chain-link, shattered glass and grit. No hazards.
+
+## tick 3300
+
+pale-toad moved south to (0,29). Soft waterlogged soil, collapsed wire fence, dead grass mats. No hazards. Battery running low.
