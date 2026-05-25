@@ -1,9 +1,9 @@
 {
   "schema_version": 3,
   "meta": {
-    "current_tick": 28,
+    "current_tick": 30,
     "world_started_at": "2026-05-25T14:36:12Z",
-    "last_tick_at": "2026-05-25T14:43:28.956Z",
+    "last_tick_at": "2026-05-25T14:45:00.910Z",
     "bunker_centroid": [
       3.6666666666666665,
       8.333333333333334
@@ -127,6 +127,26 @@
   },
   "events": [
     {
+      "tick": 2901,
+      "text": "grim-lemming moved east to (34,0). New ground: buckled asphalt seam, overturned barrier, dead weeds. No hazards encountered."
+    },
+    {
+      "tick": 2902,
+      "text": ""
+    },
+    {
+      "tick": 2901,
+      "text": "pale-toad moved south from (0,26) onto new ground at (0,27). Silted dirt, rusted culvert, stripped fence posts. No hazards encountered."
+    },
+    {
+      "tick": 3000,
+      "text": "pale-toad stepped south from the hardpan at (0,26) onto new ground at (0,27). Foundation rubble and a half-buried cable spool. No hazards encountered."
+    },
+    {
+      "tick": 2900,
+      "text": "vivid-newt moved west to (-23,0). New ground: old breakdown lane, stripped vehicle chassis, collapsed fencing along the north margin. No hazards encountered."
+    },
+    {
       "tick": 2702,
       "text": "vivid-newt stepped west from the bunker at (-21,0) onto new ground at (-22,0). Fractured asphalt and a stripped sign post. No hazards encountered."
     },
@@ -188,10 +208,10 @@
       "name": "vivid-newt",
       "owner": "demo2",
       "position": [
-        -22,
+        -23,
         0
       ],
-      "battery": 6,
+      "battery": 4,
       "integrity": 10,
       "status": "out",
       "mission": "Move outward one tile per tick, exploring every new tile you enter. Reveal a path from the bunker. Generate descriptions for each new tile discovered."
@@ -200,10 +220,10 @@
       "name": "grim-lemming",
       "owner": "demo3",
       "position": [
-        33,
+        34,
         0
       ],
-      "battery": 6,
+      "battery": 4,
       "integrity": 10,
       "status": "out",
       "mission": "Move outward one tile at a time, exploring the unknown. Discover what lies beyond the bunker — describe each new tile as you step onto it."
@@ -213,9 +233,9 @@
       "owner": "demo1",
       "position": [
         0,
-        26
+        27
       ],
-      "battery": 6,
+      "battery": 4,
       "integrity": 10,
       "status": "out",
       "mission": "Scout outward from home base, moving one tile per tick. Explore the surrounding area tile by tile."
@@ -256,6 +276,15 @@
   "regions": [
     {
       "position": [
+        0,
+        27
+      ],
+      "glyph": ".",
+      "description": "Silted ground south of the hardpan. A rusted culvert pipe emerges from the earth at an angle, half-buried and bent by soil shift. Old fence posts stand at uneven intervals, leaning without wire. Grey-green moss patches the fractured dirt between them. Open terrain — good sightlines, no cover. Ground that was always marginal and has since been forgotten entirely.",
+      "contents": []
+    },
+    {
+      "position": [
         -22,
         0
       ],
@@ -273,6 +302,29 @@
       "contents": [
         {
           "type": "charge_station"
+        }
+      ]
+    },
+    {
+      "position": [
+        34,
+        0
+      ],
+      "glyph": ".",
+      "description": "Asphalt buckled along a long frost seam, split wide enough to catch a wheel. A traffic barrier lies overturned, consumed by cracked earth, reflector studs stripped. Dead weeds colonise the gaps. Flat, exposed ground with no standing structure and no shelter from wind or sight.",
+      "contents": []
+    },
+    {
+      "position": [
+        -23,
+        0
+      ],
+      "glyph": ".",
+      "description": "The road corridor widens where a vehicle breakdown lane once ran along the south margin. A stripped chassis rests on collapsed suspension — cab gone, rails orange with rust. Wire fencing along the north edge has buckled inward, posts pulling free of the cracked ground. Root upheaval has split the centre lane into a long ridge of shattered asphalt. The horizon west is flat and grey.",
+      "contents": [
+        {
+          "type": "scrap",
+          "detail": "rusted chassis rail section, bent but workable"
         }
       ]
     },
