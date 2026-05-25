@@ -85,3 +85,7 @@ pale-toad advanced south to (0,28). New ground: cracked mud flats, collapsed cha
 ## tick 3101
 
 tick 3100 — vivid-newt advanced west to (-25,0). New ground: buckled service lane, collapsed fencing, dry drainage gulley. No hazards encountered.
+
+## tick 3102
+
+grim-lemming stepped east to (35,0). New ground: crumbled lot edge, toppled chain-link, shattered glass and grit. No hazards.
