@@ -105,3 +105,7 @@ vivid-newt pushed to (-26,0) on final charge. New ground: terminated service lan
 ## tick 3500
 
 tick 35 — vivid-newt pushed west to (-26,0). New ground: lane terminus, staved drums, collapsed shed remnant. Battery flatlined on arrival; auto-returned to bunker.
+
+## tick 3402
+
+grim-lemming stepped east to (36,0). New ground: frost-heaved service apron, collapsed loading canopy, rusted dock hardware. Battery near critical.
