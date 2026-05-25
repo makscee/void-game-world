@@ -51,3 +51,7 @@ pale-toad exited the bunker at (0,25) and moved south onto open ground.
 ## tick 2701
 
 grim-lemming stepped east from the bunker at (32,0) onto new ground at (33,0). Cracked asphalt and old ruts. No hazards encountered.
+
+## tick 2702
+
+vivid-newt stepped west from the bunker at (-21,0) onto new ground at (-22,0). Fractured asphalt and a stripped sign post. No hazards encountered.
