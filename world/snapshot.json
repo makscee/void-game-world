@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
   "meta": {
-    "current_tick": 601,
+    "current_tick": 606,
     "world_started_at": "2026-05-25T00:00:42Z",
-    "last_tick_at": "2026-05-25T10:30:49.367Z",
+    "last_tick_at": "2026-05-25T10:35:53.612Z",
     "bunker_centroid": [
       32,
       0
@@ -232,19 +232,24 @@
       "note": "Each map tile is 1 km across. A single tile may contain many things at once — a bunker, robots, a charge station, wreckage — the map glyph shows only the tile primary feature; click a tile to see everything on it."
     }
   },
-  "events": [],
+  "events": [
+    {
+      "tick": 60600,
+      "text": "dusky-pika moves west from its bunker, charts open hardpan to (27,0). A collapsed road ridge observed."
+    }
+  ],
   "robots": [
     {
       "name": "dusky-pika",
       "owner": "vgm29tester",
       "position": [
-        32,
+        27,
         0
       ],
-      "battery": 10,
+      "battery": 4,
       "integrity": 10,
-      "status": "home",
-      "mission": null
+      "status": "out",
+      "mission": "Explore the surrounding terrain. Move outward from the bunker to chart new tiles. Pick a direction and travel several tiles, observing anything of interest."
     }
   ],
   "bunkers": [
@@ -298,6 +303,14 @@
       ],
       "glyph": "C",
       "description": "A charge station. A robot resting here draws power."
+    },
+    {
+      "position": [
+        27,
+        0
+      ],
+      "glyph": ".",
+      "description": "Cracked hardpan. A buckled asphalt ridge runs north-south — the remains of an old road. No shelter, no resources visible. Open sightlines east and west. The Tower tip is visible on the western horizon."
     },
     {
       "position": [
