@@ -1,9 +1,9 @@
 {
   "schema_version": 3,
   "meta": {
-    "current_tick": 26,
+    "current_tick": 28,
     "world_started_at": "2026-05-25T14:36:12Z",
-    "last_tick_at": "2026-05-25T14:42:13.670Z",
+    "last_tick_at": "2026-05-25T14:43:28.956Z",
     "bunker_centroid": [
       3.6666666666666665,
       8.333333333333334
@@ -16,7 +16,7 @@
     }
   },
   "map": {
-    "grid": "B                    T                               B\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n                     B\n",
+    "grid": "B                    T                               B.\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n                     B\n                     .\n",
     "x_offset": -21,
     "y_offset": 0,
     "origin": [
@@ -127,6 +127,26 @@
   },
   "events": [
     {
+      "tick": 2702,
+      "text": "vivid-newt stepped west from the bunker at (-21,0) onto new ground at (-22,0). Fractured asphalt and a stripped sign post. No hazards encountered."
+    },
+    {
+      "tick": 2701,
+      "text": "grim-lemming stepped east from the bunker at (32,0) onto new ground at (33,0). Cracked asphalt and old ruts. No hazards encountered."
+    },
+    {
+      "tick": 2800,
+      "text": "pale-toad exited the bunker at (0,25) and moved south onto open ground."
+    },
+    {
+      "tick": 2700,
+      "text": "pale-toad left the home bunker and moved north into unexplored ground at (0,24). Fractured asphalt; no hazards encountered."
+    },
+    {
+      "tick": 2200,
+      "text": "vivid-newt swept the bunker at (-21,0) a final time. One last scrap recovered from the workbench underside. The space has given up what it had."
+    },
+    {
       "tick": 2002,
       "text": "vivid-newt swept the bunker at (-21,0). A small find recovered from behind the charge station housing."
     },
@@ -168,37 +188,37 @@
       "name": "vivid-newt",
       "owner": "demo2",
       "position": [
-        -21,
+        -22,
         0
       ],
-      "battery": 8,
+      "battery": 6,
       "integrity": 10,
-      "status": "home",
-      "mission": null
+      "status": "out",
+      "mission": "Move outward one tile per tick, exploring every new tile you enter. Reveal a path from the bunker. Generate descriptions for each new tile discovered."
     },
     {
       "name": "grim-lemming",
       "owner": "demo3",
       "position": [
-        32,
+        33,
         0
       ],
-      "battery": 8,
+      "battery": 6,
       "integrity": 10,
-      "status": "home",
-      "mission": null
+      "status": "out",
+      "mission": "Move outward one tile at a time, exploring the unknown. Discover what lies beyond the bunker — describe each new tile as you step onto it."
     },
     {
       "name": "pale-toad",
       "owner": "demo1",
       "position": [
         0,
-        25
+        26
       ],
-      "battery": 8,
+      "battery": 6,
       "integrity": 10,
-      "status": "home",
-      "mission": null
+      "status": "out",
+      "mission": "Scout outward from home base, moving one tile per tick. Explore the surrounding area tile by tile."
     }
   ],
   "bunkers": [
@@ -236,6 +256,15 @@
   "regions": [
     {
       "position": [
+        -22,
+        0
+      ],
+      "glyph": ".",
+      "description": "A fractured road corridor trending west. Asphalt plates, frost-heaved and root-split, buckle into uneven angles. A stripped sign post leans at the north margin — mounting bolts still in place, face long stripped or fallen. Scrub grass presses through every joint in the pavement. The low remains of a concrete kerb run along the south edge, crumbled to rubble in stretches.",
+      "contents": []
+    },
+    {
+      "position": [
         32,
         0
       ],
@@ -250,10 +279,37 @@
     {
       "position": [
         0,
+        24
+      ],
+      "glyph": ".",
+      "description": "Fractured asphalt in broad irregular plates, heaved apart by years of frost and root. A stripped signpost lists northward, its placard long sheared away. Moss fills every gap. The memory of a road — nothing more.",
+      "contents": []
+    },
+    {
+      "position": [
+        0,
+        26
+      ],
+      "glyph": ".",
+      "description": "Cracked hardpan south of the bunker. An old drainage channel cuts east-west across it, concrete lips heaved and broken by decades of frost. Sparse weed-clumps push through the fissures. No shelter, no shade. The kind of ground that was always transitional — now it is simply forgotten.",
+      "contents": []
+    },
+    {
+      "position": [
+        0,
         0
       ],
       "glyph": "T",
       "description": "## The Tower\n\nSealed. No one knows what is inside.\n\nA black spire of fused girders and dead cabling, taller than anything left\nstanding. The entrance, if there ever was one, is gone — the ground-level\nplates are fused solid, the upper hatches corroded shut. It does not hum. It\ndoes not light. It simply persists, a fixed point in a landscape that has lost\nevery other.\n\nAll distances are measured from here. The robots wake far out, far enough that\nthe Tower is only a notch on the horizon, and they walk toward it because it is\nthe one thing that does not move. The journey takes more than one charge.\n\nLocked. Unknown contents. No unlock mechanic has been found.",
+      "contents": []
+    },
+    {
+      "position": [
+        33,
+        0
+      ],
+      "glyph": ".",
+      "description": "Cracked asphalt plates, frost-heaved into low ridges and gaps. A corroded pipe section protrudes from the earth at an angle — diameter suggests drainage, origin unknown. Tyre ruts pressed into old mud have set stone-hard. No standing structure. No shelter.",
       "contents": []
     },
     {
