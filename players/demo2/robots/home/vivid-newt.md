@@ -4,15 +4,15 @@ owner: demo2
 position:
   - -21
   - 0
-battery: 9
+battery: 8
 integrity: 10
 integrity_max: 10
 inventory:
   ration: 2
-  scrap: 1
-last_ticked: 6
-mission: explore and search the current tile thoroughly for anything useful
-mission_started_at: 1
+  scrap: 2
+last_ticked: 20
+mission: null
+mission_started_at: null
 stuck_for_ticks: 0
 ---
 

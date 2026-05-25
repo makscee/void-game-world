@@ -31,3 +31,7 @@ grim-lemming made a full sweep of the bunker at (32,0). Nothing new turned up.
 ## tick 2001
 
 grim-lemming conducted a thorough sweep of the bunker at (32,0). Nothing new recovered — the space has given up what it had.
+
+## tick 2002
+
+vivid-newt swept the bunker at (-21,0). A small find recovered from behind the charge station housing.
