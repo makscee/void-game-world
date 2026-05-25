@@ -5,8 +5,8 @@
   "x_offset": 0,
   "y_offset": 0,
   "bunker_centroid": [
-    0,
+    32,
     0
   ],
-  "player_count": 0
+  "player_count": 1
 }
