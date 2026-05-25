@@ -97,3 +97,7 @@ pale-toad moved south to (0,29). Soft waterlogged soil, collapsed wire fence, de
 ## tick 3400
 
 pale-toad broke off scout at (0,28) — battery near empty. Falling back to bunker at (0,27).
+
+## tick 3401
+
+vivid-newt pushed to (-26,0) on final charge. New ground: terminated service lane, frost-heaved parking apron, leaning sign post. Battery exhausted; auto-returned to bunker.
