@@ -10,7 +10,7 @@ integrity_max: 10
 inventory: {}
 last_ticked: 18
 mission: "Explore the surrounding terrain. Move outward from the bunker to chart new tiles. Pick a direction and travel several tiles, observing anything of interest."
-mission_started_at: "2026-05-25T00:00:00.000Z"
+mission_started_at: 1779705347000
 stuck_for_ticks: 0
 ---
 
