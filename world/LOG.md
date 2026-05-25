@@ -27,3 +27,7 @@ pale-toad made a thorough sweep of the bunker at (0,25). A small find recovered 
 ## tick 2100
 
 grim-lemming made a full sweep of the bunker at (32,0). Nothing new turned up.
+
+## tick 2001
+
+grim-lemming conducted a thorough sweep of the bunker at (32,0). Nothing new recovered — the space has given up what it had.

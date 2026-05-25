@@ -12,3 +12,8 @@ duration: 3 ticks
 mission: explore and search the current tile thoroughly for anything useful
 outcome: Swept (32,0) thoroughly. Nothing undocumented remains. The bunker is empty of finds.
 duration: 20 ticks
+
+## tick 20 — grim-lemming
+mission: explore and search the current tile thoroughly for anything useful
+outcome: Bunker swept thoroughly. No new finds. The place has been picked clean.
+duration: 19 ticks
