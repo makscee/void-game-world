@@ -93,3 +93,7 @@ grim-lemming stepped east to (35,0). New ground: crumbled lot edge, toppled chai
 ## tick 3300
 
 pale-toad moved south to (0,29). Soft waterlogged soil, collapsed wire fence, dead grass mats. No hazards. Battery running low.
+
+## tick 3400
+
+pale-toad broke off scout at (0,28) — battery near empty. Falling back to bunker at (0,27).
