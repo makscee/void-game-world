@@ -63,3 +63,7 @@ vivid-newt moved west to (-23,0). New ground: old breakdown lane, stripped vehic
 ## tick 3000
 
 pale-toad stepped south from the hardpan at (0,26) onto new ground at (0,27). Foundation rubble and a half-buried cable spool. No hazards encountered.
+
+## tick 2901
+
+pale-toad moved south from (0,26) onto new ground at (0,27). Silted dirt, rusted culvert, stripped fence posts. No hazards encountered.

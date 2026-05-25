@@ -11,7 +11,7 @@ inventory:
   ration_tab: 2
   patch_wire: 1
   power_cell_dead: 1
-last_ticked: 30
+last_ticked: 29
 mission: Scout outward from home base, moving one tile per tick. Explore the
   surrounding area tile by tile.
 mission_started_at: 26
