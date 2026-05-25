@@ -55,3 +55,7 @@ grim-lemming stepped east from the bunker at (32,0) onto new ground at (33,0). C
 ## tick 2702
 
 vivid-newt stepped west from the bunker at (-21,0) onto new ground at (-22,0). Fractured asphalt and a stripped sign post. No hazards encountered.
+
+## tick 2900
+
+vivid-newt moved west to (-23,0). New ground: old breakdown lane, stripped vehicle chassis, collapsed fencing along the north margin. No hazards encountered.
