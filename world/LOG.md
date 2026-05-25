@@ -23,3 +23,7 @@ vivid-newt swept the bunker at (-21,0) and recovered a cache left behind a loose
 ## tick 2000
 
 pale-toad made a thorough sweep of the bunker at (0,25). A small find recovered from beneath a loose floor plate.
+
+## tick 2100
+
+grim-lemming made a full sweep of the bunker at (32,0). Nothing new turned up.

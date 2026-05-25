@@ -10,9 +10,9 @@ integrity_max: 10
 inventory:
   ration_tin: 1
   copper_wire: 1
-last_ticked: 4
-mission: explore and search the current tile thoroughly for anything useful
-mission_started_at: 1
+last_ticked: 21
+mission: null
+mission_started_at: null
 stuck_for_ticks: 0
 ---
 
