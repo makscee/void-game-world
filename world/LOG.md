@@ -39,3 +39,7 @@ vivid-newt swept the bunker at (-21,0). A small find recovered from behind the c
 ## tick 2200
 
 vivid-newt swept the bunker at (-21,0) a final time. One last scrap recovered from the workbench underside. The space has given up what it had.
+
+## tick 2700
+
+pale-toad left the home bunker and moved north into unexplored ground at (0,24). Fractured asphalt; no hazards encountered.
