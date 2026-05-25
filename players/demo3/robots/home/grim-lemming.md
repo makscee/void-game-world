@@ -11,8 +11,8 @@ inventory:
   ration_tin: 1
   copper_wire: 1
 last_ticked: 4
-mission: null
-mission_started_at: null
+mission: explore and search the current tile thoroughly for anything useful
+mission_started_at: 1
 stuck_for_ticks: 0
 ---
 
