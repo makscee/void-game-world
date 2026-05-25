@@ -67,3 +67,9 @@ pale-toad stepped south from the hardpan at (0,26) onto new ground at (0,27). Fo
 ## tick 2901
 
 pale-toad moved south from (0,26) onto new ground at (0,27). Silted dirt, rusted culvert, stripped fence posts. No hazards encountered.
+
+## tick 2902
+
+## tick 2901
+
+grim-lemming moved east to (34,0). New ground: buckled asphalt seam, overturned barrier, dead weeds. No hazards encountered.
