@@ -2,14 +2,15 @@
 name: dusky-pika
 owner: vgm29tester
 position:
-  - 32
+  - 23
   - 0
-battery: 10
+battery: 1
 integrity: 10
 integrity_max: 10
 inventory: {}
-last_ticked: 608
-mission: "Continue exploring west. Move further from the bunker, chart new terrain, and document what you find along the old road."
+last_ticked: 610
+mission: Continue exploring west. Move further from the bunker, chart new
+  terrain, and document what you find along the old road.
 mission_started_at: 1779705663000
 stuck_for_ticks: 0
 ---
