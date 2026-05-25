@@ -59,3 +59,7 @@ vivid-newt stepped west from the bunker at (-21,0) onto new ground at (-22,0). F
 ## tick 2900
 
 vivid-newt moved west to (-23,0). New ground: old breakdown lane, stripped vehicle chassis, collapsed fencing along the north margin. No hazards encountered.
+
+## tick 3000
+
+pale-toad stepped south from the hardpan at (0,26) onto new ground at (0,27). Foundation rubble and a half-buried cable spool. No hazards encountered.
