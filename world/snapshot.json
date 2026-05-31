@@ -1,9 +1,9 @@
 {
   "schema_version": 3,
   "meta": {
-    "current_tick": 7908,
+    "current_tick": 7909,
     "world_started_at": "2026-05-25T14:36:12Z",
-    "last_tick_at": "2026-05-31T11:32:21.137Z",
+    "last_tick_at": "2026-05-31T11:33:25.059Z",
     "bunker_centroid": [
       3.6666666666666665,
       8.333333333333334
